@@ -1,0 +1,84 @@
+@import url(./animations.scss);
+@import url(./fonts.scss);
+
+main {
+  width: 100vw;
+  scroll-behavior: smooth;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 115rem;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "InterDisplay";
+
+  img {
+    height: 28px;
+    width: 157.783px;
+    transition:
+      padding 0.3s,
+      border-radius 0.3s,
+      background-color 0.3s;
+  }
+}
+
+a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--link-gray);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--hover-link-gray);
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  max-width: 100% !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  max-width: 100% !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: "Geist Mono Variable";
+  font-weight: 500;
+}
+
+h1,
+h2 {
+  color: #1d1d1d;
+  font-weight: 800;
+  font-family: 'InterDisplay';
+}
+
+::selection {
+  background-color: var(--boek-green-1);
+  color: var(--white);
+}

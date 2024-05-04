@@ -1,0 +1,28 @@
+{
+  "name": "aploe",
+  "version": "0.6.0",
+  "description": "Purposefully designed Vue.js components and CSS framework for enterprise websites.",
+  "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabsEdits/aploe.git"
+  },
+  "keywords": [
+    "aploe",
+    "vue",
+    "css",
+    "scss",
+    "style"
+  ],
+  "author": "Gabriel Cozma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GabsEdits/aploe/issues"
+  },
+  "homepage": "https://github.com/GabsEdits/aploe#readme",
+  "dependencies": {
+    "inter-ui": "^4.0.2",
+    "non.geist": "^1.0.2",
+    "sass": "^1.75.0"
+  }
+}
