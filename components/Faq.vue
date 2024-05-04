@@ -1,9 +1,11 @@
 <template>
   <section id="faq-section">
-    <span class="material-symbols-rounded icon" :style="'color:' + iconColor"> help </span>
+    <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
+      help
+    </span>
     <h2>{{ $t(title) }}</h2>
     <div class="questions">
-        <slot></slot>
+      <slot></slot>
     </div>
   </section>
 </template>
@@ -56,11 +58,11 @@ defineProps({
 
 @media (max-width: 768px) {
   .questions {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
-@media screen and (max-width: 1138px) {
+@media screen and (max-width: 1138px) and (min-width: 768px) {
   .questions {
     grid-template-columns: repeat(2, 1fr) !important;
     grid-gap: 10px;
