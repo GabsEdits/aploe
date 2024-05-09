@@ -84,6 +84,7 @@ footer {
   background-color: var(--footer-back);
   padding: 1rem;
   text-align: center;
+  border-radius: 30px 30px 0 0;
 
   .footer-links {
     display: flex;
