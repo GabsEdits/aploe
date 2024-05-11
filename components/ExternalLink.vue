@@ -5,11 +5,14 @@
     </span>
     <h2>{{ $t(title) }}</h2>
     <p>{{ $t(description) }}</p>
-    <a :href="link" :style="'background-color:' + linkColor">{{ $t(linkText) }}</a>
+    <router-link v-if="isRouterLink" :to="link" :style="'background-color:' + linkColor">{{ $t(linkText) }}</router-link>
+    <a v-else :href="link" :style="'background-color:' + linkColor">{{ $t(linkText) }}</a>
   </section>
 </template>
 
 <script setup>
+import { defineProps } from 'vue';
+
 defineProps({
   title: String,
   description: String,
@@ -19,6 +22,7 @@ defineProps({
   link: String,
   linkText: String,
   linkColor: String,
+  isRouterLink: Boolean,
 });
 </script>
 
