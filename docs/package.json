@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "pages:dev": "vitepress dev pages",
+    "pages:build": "vitepress build pages",
+    "pages:preview": "vitepress preview pages"
+  },
+  "dependencies": {
+    "aplos": "^1.5.0"
+  },
+  "devDependencies": {
+    "sass": "^1.74.1",
+    "vitepress": "^1.1.3"
+  }
+}

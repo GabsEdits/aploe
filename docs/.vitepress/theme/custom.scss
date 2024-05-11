@@ -1,0 +1,197 @@
+:root {
+    font-feature-settings: "liga" 1, "calt" 1, "cv05" 0 !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.home {
+    #title {
+        margin: 0px;
+        font-size: 38px;
+        color: var(--color-accent);
+
+        @media (prefers-color-scheme: dark) {
+            background: linear-gradient(95deg, #90b494 32.27%, #d8bd5b 68.51%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .lang {
+        display: none;
+    }
+
+    .features ul {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+
+        @media screen and (max-width: 37.5rem) {
+            grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        }
+
+        min-width: 100%;
+        padding: 0;
+        gap: 6px;
+
+        li {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-wrap: balance;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            background-color: var(--color-background-second);
+            border-radius: 7px;
+            transition: transform 0.3s ease 0s, background-color 0.3s ease 0s;
+
+            .emoji {
+                font-size: 30px;
+                background-color: var(--color-background-mute);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                border-radius: 6px;
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+                transition: background-color 0.25s;
+                cursor: default;
+            }
+        }
+    }
+
+    .usedby ul {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+
+        @media screen and (max-width: 37.5rem) {
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        }
+
+        min-width: 100%;
+        gap: 10px;
+
+        #myself {
+            font-weight: 900;
+            font-size: 35px;
+
+            a {
+                text-decoration: none;
+                font-weight: inherit;
+
+                @media (prefers-color-scheme: dark) {
+                    color: white;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        li {
+            list-style: none;
+            text-align: center;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                padding: 20px;
+                text-align: center;
+                background-color: var(--color-background-second);
+                border-radius: 8px;
+                transition: transform .3s ease 0s, background-color .3s ease 0s;
+
+                @media (prefers-color-scheme: light) {
+
+                    &:hover {
+                        background-color: var(--color-background-mute);
+                    }
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    transition: all 0.3s;
+
+                    &:hover {
+                        filter: grayscale(0) invert(0);
+                        background-color: rgb(255, 255, 255);
+
+                        img {
+                            filter: grayscale(0) invert(0);
+                            box-shadow: none;
+                            transform: none;
+                        }
+                    }
+
+                    img {
+                        filter: grayscale(1) invert(1);
+                        transition: all 0.3s;
+                        margin: 20px;
+                        width: 200px;
+                        border-radius: 0;
+                    }
+                }
+
+                img {
+                    margin: 20px;
+                    width: 200px;
+                    border-radius: 0;
+
+                    &:hover {
+                        box-shadow: none;
+                        transform: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+
+    #aeolus,
+    #quote {
+        text-align: center;
+        font-style: italic;
+        color: var(--color-text-secondary);
+        font-weight: 500;
+    }
+
+    #desc {
+        font-weight: 500;
+        color: var(--color-text-secondary);
+    }
+
+    aside {
+        width: 40%;
+
+        h2 {
+            font-size: 32px;
+            margin: 5px 0;
+        }
+
+        @media screen and (max-width: 37.5rem) {
+            width: 100%;
+        }
+    }
+
+    #journey {
+        padding: 0;
+    }
+
+    #layout {
+        img {
+            width: 500px;
+        }
+    }
+}
