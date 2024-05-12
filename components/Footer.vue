@@ -57,10 +57,8 @@
   </footer>
 </template>
 
-<script setup>
-import config from "../config.ts";
-import {  } from 'vue';
-
+<script setup lang="ts">
+import config from "@/aploe.config.mts";
 
 const { buildFrom } = config;
 
