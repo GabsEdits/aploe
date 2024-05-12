@@ -58,9 +58,12 @@
 </template>
 
 <script setup>
-import WebsiteConfig from "../website.config";
+import config from "../config.ts";
+import {  } from 'vue';
 
-const { buildFrom } = WebsiteConfig;
+
+const { buildFrom } = config;
+
 
 defineProps({
   badges: String,
