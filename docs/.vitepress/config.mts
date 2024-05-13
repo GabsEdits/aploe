@@ -49,7 +49,7 @@ export default defineConfig({
   },
   head: [
     ["meta", { name: "author", content: "Gabriel Cozma" }], // Change this to Gabriel Cozma
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", type: "png", href: "/logo.png" }],
     ["meta", { name: "theme-color", content: "#ff3e00" }], // Your theme color
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:locale", content: "en" }],
@@ -87,7 +87,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-          $color-accent: #90B494;
+          $color-accent: #A35262; // 8377D1
           `,
         },
       },

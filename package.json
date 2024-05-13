@@ -1,7 +1,7 @@
 {
   "name": "aploe",
   "version": "0.9.4",
-  "description": "Purposefully designed Vue.js components and CSS framework for enterprise websites",
+  "description": "Lightweight and minimalistic Vue.js components and styles for informational websites",
   "main": "index.ts",
   "repository": {
     "type": "git",
