@@ -26,6 +26,6 @@
     "sass": "^1.76.0"
   },
   "devDependencies": {
-    "@types/node": "^20.12.11"
+    "@types/node": "^20.12.12"
   }
 }
