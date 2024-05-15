@@ -6,13 +6,13 @@
       ><slot name="special"></slot
     ></a>
     <div class="footer-links">
-      <a :href="firstLink" class="touch-space"
+      <a :href="firstLink"
         ><slot name="first-link"></slot
       ></a>
-      <a :href="secondLink" class="touch-space"
+      <a :href="secondLink"
         ><slot name="second-link"></slot
       ></a>
-      <a :href="thirdLink" class="touch-space"
+      <a :href="thirdLink"
         ><slot name="third-link"></slot
       ></a>
     </div>
@@ -92,6 +92,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 1rem;
+    gap: 0.625rem;
   }
 
   .footer-links a {
