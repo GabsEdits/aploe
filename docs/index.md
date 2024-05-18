@@ -72,7 +72,7 @@ By it's words, Aplóe includes a design language, following specific styles to m
 
 <section class="usedby">
 
-- [![Boekestijn](https://soferii.md/images/boekestijn-transport.svg#no-border)](https://boekestijn.md)
+- [![Boekestijn](https://soferii.md/images/boekestijn-transport.svg#no-border#static)](https://boekestijn.md)
 - [Gabs](https://gxbs.me/) { #myself }
 
 </section>

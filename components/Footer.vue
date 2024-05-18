@@ -2,19 +2,19 @@
   <footer id="footer">
     <img v-if="badges" :src="badges" class="badges" :alt="badgesAlt" />
     <p class="call-footer">{{ $t("footer.call") }}</p>
-    <a v-if="specialLink" :href="specialLink" id="footer-special-link" class="footer-links"
+    <a
+      v-if="specialLink"
+      :href="specialLink"
+      id="footer-special-link"
+      class="footer-links"
       ><slot name="special"></slot
     ></a>
     <div class="footer-links">
-      <a :href="firstLink"
-        ><slot name="first-link"></slot
-      ></a>
-      <a :href="secondLink"
-        ><slot name="second-link"></slot
-      ></a>
-      <a :href="thirdLink"
-        ><slot name="third-link"></slot
-      ></a>
+      <template v-for="item in footerLinks">
+        <a :href="item.href">
+          <slot :name="item.slotName"></slot>
+        </a>
+      </template>
     </div>
     <div class="footer-additional">
       <a
@@ -62,7 +62,6 @@ import config from "@/aploe.config.mts";
 
 const { buildFrom } = config;
 
-
 defineProps({
   badges: String,
   badgesAlt: String,
@@ -77,6 +76,7 @@ defineProps({
   copyright: String,
   author: String,
   authorLink: String,
+  footerLinks: Array,
 });
 </script>
 
