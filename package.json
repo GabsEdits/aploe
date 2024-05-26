@@ -27,5 +27,10 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.12"
+  },
+  "scripts": {
+    "docs:dev": "pnpm --filter=./docs run dev",
+    "docs:build": "pnpm --filter=./docs run build",
+    "docs:preview": "pnpm --filter=./docs run preview"
   }
 }
