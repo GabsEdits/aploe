@@ -5,13 +5,20 @@
     </span>
     <h2>{{ $t(title) }}</h2>
     <p>{{ $t(description) }}</p>
-    <router-link v-if="isRouterLink" :to="link" :style="'background-color:' + linkColor">{{ $t(linkText) }}</router-link>
-    <a v-else :href="link" :style="'background-color:' + linkColor">{{ $t(linkText) }}</a>
+    <router-link
+      v-if="isRouterLink"
+      :to="link"
+      :style="'background-color:' + linkColor"
+      >{{ $t(linkText) }}</router-link
+    >
+    <a v-else :href="link" :style="'background-color:' + linkColor">{{
+      $t(linkText)
+    }}</a>
   </section>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from "vue";
 
 defineProps({
   title: String,

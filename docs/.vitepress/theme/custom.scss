@@ -1,5 +1,8 @@
 :root {
-  font-feature-settings: "liga" 1, "calt" 1, "cv05" 0 !important;
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1,
+    "cv05" 0 !important;
 }
 
 main {
@@ -52,7 +55,9 @@ main {
       text-align: center;
       background-color: var(--color-background-second);
       border-radius: 7px;
-      transition: transform 0.3s ease 0s, background-color 0.3s ease 0s;
+      transition:
+        transform 0.3s ease 0s,
+        background-color 0.3s ease 0s;
 
       strong {
         font-size: 30px;
@@ -115,7 +120,9 @@ main {
         text-align: center;
         background-color: var(--color-background-second);
         border-radius: 8px;
-        transition: transform 0.3s ease 0s, background-color 0.3s ease 0s;
+        transition:
+          transform 0.3s ease 0s,
+          background-color 0.3s ease 0s;
 
         @media (prefers-color-scheme: light) {
           &:hover {

@@ -56,19 +56,19 @@ const toggleLanguageDropdown = () => {
 };
 
 const toggleDropdown = (slotName) => {
-  if (slotName === 'dropdownOne') {
+  if (slotName === "dropdownOne") {
     showPhoneDropdown.value = !showPhoneDropdown.value;
   }
 };
 
 const hideDropdown = (slotName) => {
-  if (slotName === 'dropdownOne') {
+  if (slotName === "dropdownOne") {
     showPhoneDropdown.value = false;
   }
 };
 
 const isDropdownVisible = (slotName) => {
-  if (slotName === 'dropdownOne') {
+  if (slotName === "dropdownOne") {
     return showPhoneDropdown.value;
   }
   return false;

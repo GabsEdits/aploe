@@ -2,6 +2,7 @@
 <h1>Aplóe</h1>
 
 Lightweight and minimalistic Vue.js components and styles for informational websites
+
 </div>
 
 - **🎨** Purposefully designed lightweight and minimalistic design language.
@@ -27,13 +28,14 @@ Aplóe consists of a collection of components that can be easily customized with
 
 ```vue
 <CarData
-    title="livecars.title"
-    description="livecars.desc"
-    icon="globe"
-    api="https://api.example.org:12345/api/get_cars"
-    fallback="1000"
-    background="#c0e2de83"
-    iconColor="green">
+  title="livecars.title"
+  description="livecars.desc"
+  icon="globe"
+  api="https://api.example.org:12345/api/get_cars"
+  fallback="1000"
+  background="#c0e2de83"
+  iconColor="green"
+>
 </CarData>
 ```
 
@@ -41,12 +43,13 @@ The example above is a simple component that displays specific content from an A
 
 ```vue
 <ExternalLink
-    title="external.title"
-    description="external.desc"
-    link="https://example.org"
-    icon="globe"
-    background="#c0e2de83"
-    iconColor="green">
+  title="external.title"
+  description="external.desc"
+  link="https://example.org"
+  icon="globe"
+  background="#c0e2de83"
+  iconColor="green"
+>
 </ExternalLink>
 ```
 

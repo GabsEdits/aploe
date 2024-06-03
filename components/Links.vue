@@ -22,9 +22,7 @@
         <h2>{{ $t(linkTwoTitle) }}</h2>
         <ul>
           <li>
-            <a :href="linkTwo" target="_blank">{{
-              $t(linkTwoText)
-            }}</a>
+            <a :href="linkTwo" target="_blank">{{ $t(linkTwoText) }}</a>
           </li>
         </ul>
       </section>

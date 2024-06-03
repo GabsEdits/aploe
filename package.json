@@ -23,6 +23,7 @@
   "dependencies": {
     "inter-ui": "^4.0.2",
     "non.geist": "^1.0.3",
+    "prettier": "^3.3.0",
     "sass": "^1.77.2"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
   "scripts": {
     "docs:dev": "pnpm --filter=./docs run dev",
     "docs:build": "pnpm --filter=./docs run build",
-    "docs:preview": "pnpm --filter=./docs run preview"
+    "docs:preview": "pnpm --filter=./docs run preview",
+    "format": "prettier --write ."
   }
 }

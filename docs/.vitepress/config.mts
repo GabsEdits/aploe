@@ -10,7 +10,8 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
 
-  themeConfig: { // Main Theme Config
+  themeConfig: {
+    // Main Theme Config
     author: "Gabriel Cozma", // Change this to Gabriel Cozma
     colorScheme: {
       accent: "#c1b134", // Change this to your accent color (Doesn't work currently, will be fixed in the future. For now, just change the color in the custom.scss file)
@@ -79,7 +80,8 @@ export default defineConfig({
     ],
     ["meta", { name: "twitter:url", content: "https://aplos.gxbs.me" }], // Change this to your domain
   ],
-  sitemap: { // Change this to your domain
+  sitemap: {
+    // Change this to your domain
     hostname: "https://aploe.gxbs.me",
   },
   vite: {
