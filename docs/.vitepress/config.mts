@@ -12,6 +12,7 @@ export default defineConfig({
 
   themeConfig: {
     // Main Theme Config
+    minimal: true,
     author: "Gabriel Cozma", // Change this to Gabriel Cozma
     colorScheme: {
       accent: "#c1b134", // Change this to your accent color (Doesn't work currently, will be fixed in the future. For now, just change the color in the custom.scss file)

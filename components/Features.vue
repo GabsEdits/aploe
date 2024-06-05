@@ -1,14 +1,12 @@
 <template>
   <section id="features">
-    <div class="container">
-      <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
-        {{ icon }}
-      </span>
-      <h2>{{ $t(title) }}</h2>
-      <ul>
-        <slot></slot>
-      </ul>
-    </div>
+    <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
+      {{ icon }}
+    </span>
+    <h2>{{ $t(title) }}</h2>
+    <ul>
+      <slot></slot>
+    </ul>
   </section>
 </template>
 

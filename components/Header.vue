@@ -1,5 +1,5 @@
 <template>
-  <header class="container" :class="{ scrolled: isScrolled }">
+  <header :class="{ scrolled: isScrolled }">
     <h1>
       <a onclick="scrollToTop()" href="#top">
         <img :src="logo" :alt="logoAlt" />
@@ -100,11 +100,11 @@ defineProps({
 </script>
 
 <style lang="scss">
-header.container.scrolled {
+header.scrolled {
   border-bottom: 1.2px solid #e7e7e7;
 }
 
-header.container {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,6 +116,7 @@ header.container {
   background-color: #ffffffed;
   backdrop-filter: blur(10px);
   z-index: 2000;
+  line-height: n;
   border-bottom: 0px solid #e7e7e7;
   animation: fadeInAnimation ease 1.5s;
   transition: border-bottom 0.2s;
@@ -141,10 +142,29 @@ header.container {
     }
   }
 
-  h1 img:hover {
-    padding: 1px;
-    border-radius: 5px;
-    background-color: #bebebe84;
+  a {
+    color: var(--link-gray);
+
+    &:hover {
+      color: var(--hover-link-gray);
+    }
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+
+    img:hover {
+      padding: 1px;
+      border-radius: 5px;
+      background-color: #bebebe84;
+    }
+
+    sup {
+      margin-left: 5px;
+      top: 0;
+      font-weight: 700;
+    }
   }
 
   ul {
