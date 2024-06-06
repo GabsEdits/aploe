@@ -4,7 +4,7 @@
       {{ icon }}
     </span>
     <h2>{{ $t(title) }}</h2>
-    <p>{{ $t(description) }}</p>
+    <p v-if="description">{{ $t(description) }}</p>
     <router-link
       v-if="isRouterLink"
       :to="link"
