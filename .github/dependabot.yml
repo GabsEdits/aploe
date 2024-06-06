@@ -5,5 +5,10 @@ updates:
     schedule:
       interval: "daily"
     directory:
-      - "/"
-      - "docs/"
+      path: "/"
+
+  - package-ecosystem: npm
+    schedule:
+      interval: "daily"
+    directory:
+      path: "docs/"
