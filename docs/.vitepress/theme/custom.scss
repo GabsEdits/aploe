@@ -41,7 +41,7 @@ main {
 
     min-width: 100%;
     padding: 0;
-    gap: 6px;
+    gap: 0.375rem;
 
     li {
       list-style: none;
@@ -51,25 +51,25 @@ main {
       align-items: center;
       text-wrap: balance;
       justify-content: center;
-      padding: 20px;
+      padding: 1.25rem;
       text-align: center;
       background-color: var(--color-background-second);
-      border-radius: 7px;
+      border-radius: 0.4375rem;
       transition:
         transform 0.3s ease 0s,
         background-color 0.3s ease 0s;
 
       strong {
-        font-size: 30px;
+        font-size: 1.875rem;
         background-color: var(--color-background-mute);
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 20px;
-        border-radius: 6px;
-        width: 48px;
-        height: 48px;
-        font-size: 24px;
+        margin-bottom: 1.25rem;
+        border-radius: 0.375rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
         transition: background-color 0.25s;
         cursor: default;
       }
@@ -87,11 +87,11 @@ main {
     }
 
     min-width: 100%;
-    gap: 10px;
+    gap: 0.625rem;
 
     #myself {
       font-weight: 900;
-      font-size: 35px;
+      font-size: 2.1875rem;
 
       a {
         text-decoration: none;
@@ -116,10 +116,10 @@ main {
         align-items: center;
         justify-content: center;
         height: 100%;
-        padding: 20px;
+        padding: 1.25rem;
         text-align: center;
         background-color: var(--color-background-second);
-        border-radius: 8px;
+        border-radius: 0.5rem;
         transition:
           transform 0.3s ease 0s,
           background-color 0.3s ease 0s;
@@ -147,15 +147,15 @@ main {
           img {
             filter: grayscale(1) invert(1);
             transition: all 0.3s;
-            margin: 20px;
-            width: 200px;
+            margin: 1.25rem;
+            width: 12.5rem;
             border-radius: 0;
           }
         }
 
         img {
-          margin: 20px;
-          width: 200px;
+          margin: 1.25rem;
+          width: 12.5rem;
           border-radius: 0;
 
           &:hover {
@@ -186,8 +186,8 @@ main {
     width: 40%;
 
     h2 {
-      font-size: 32px;
-      margin: 5px 0;
+      font-size: 2rem;
+      margin: 0.3125rem 0;
     }
 
     @media screen and (max-width: 37.5rem) {
@@ -201,7 +201,11 @@ main {
 
   #layout {
     img {
-      width: 500px;
+      width: 25rem;
+
+      @media screen and (max-width: 37.5rem) {
+        width: 100%;
+      }
     }
   }
 }
