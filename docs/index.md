@@ -4,7 +4,7 @@ pageClass: home
 
 # Aplóe {.center #title}
 
-Lightweight and minimalistic Vue.js components and styles for informational websites {.center #desc}
+Lightweight and Minimalistic Vue.js Components and Styles for Informational Websites {.center #desc}
 
 <section class="features">
 
@@ -13,7 +13,7 @@ Lightweight and minimalistic Vue.js components and styles for informational webs
 - **📱** Mobile-friendly design language and components.
 - **🖋️** Utilizes premium fonts: Inter for text and Geist Mono for code snippets.
 - **🌐** Easy translations, optimized for `vue-i18n`
-- **⚙️** Simple and straightforward configuration.
+- **🔧** Built for Vue.js 3 projects with Vite.
 
 </section>
 
@@ -25,11 +25,14 @@ The project is also designed to be mobile-friendly, with a responsive design tha
 
 ## Configuration
 
-Aplóe is designed to be as easy to use as possible, with a simple configuration that can be easily customized. Each project based on Aplóe should provide an `aploe.config.mts` where the basic configuration is stored. (This is a work in progress)
+Aplóe is designed to be as easy to use as possible, with a simple configuration that can be easily customized. Each project based on Aplóe should provide an `aploe.config.mts` where the basic configuration is stored. 
+
+**It's currently not implemented, but it's planned for the future, as the project is still in development.**
 
 ## Structure
 
-Aplóe consists of a collection of components that can be easily customized with just a single item, ensuring that's it's as low-maintenance as possible. Here's an example:
+Aplóe offers a wide range of customizable components. With just a single element, you can easily customize these components to suit your needs. Here's an example:
+
 
 ```vue
 <CarData
@@ -69,6 +72,10 @@ By it's words, Aplóe includes a design language, following specific styles to m
 ::: details Example of such an layout
 ![An example of such an layout](/LayoutExample.png) {#layout}
 :::
+
+## Template
+
+Aplóe is still in heavy development, once it's mature enough, and gets a stable release, a template will be created to make it easier to start a project with Aplóe. The template will include all the necessary files and configurations to start a project with Aplóe, and it will be easy to customize and extend. The template will also include a basic example of how to use the components and styles provided by Aplóe. More information about the template will be provided once it's ready.
 
 ## Sponsors
 

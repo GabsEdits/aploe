@@ -38,6 +38,11 @@ export default defineConfig({
         name: "Gabs",
         link: "https://yourwebsite.com",
       },
+
+      sourcecode: {
+        show: true,
+        link: "https://github.com/GabsEdits/aploe",
+      },
     },
   },
 
