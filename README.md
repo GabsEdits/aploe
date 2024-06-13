@@ -20,11 +20,13 @@ The project is also designed to be mobile-friendly, with a responsive design tha
 
 ## Configuration
 
-Aplóe is designed to be as easy to use as possible, with a simple configuration that can be easily customized. Each project based on Aplóe should provide an `aploe.config.mts` where the basic configuration is stored. (This is a work in progress)
+Aplóe is designed to be as easy to use as possible, with a simple configuration that can be easily customized. Each project based on Aplóe should provide an `aploe.config.mts` where the basic configuration is stored. 
+
+**It's currently not implemented, but it's planned for the future, as the project is still in development.**
 
 ## Structure
 
-Aplóe consists of a collection of components that can be easily customized with just a single item, ensuring that's it's as low-maintenance as possible. Here's an example:
+Aplóe offers a wide range of customizable components. With just a single element, you can easily customize these components to suit your needs. Here's an example:
 
 ```vue
 <CarData
@@ -60,3 +62,7 @@ More complex components, such as the Header, Footer and other provide slots for 
 ## Design
 
 By it's words, Aplóe includes a design language, following specific styles to make the page as unified as possible. The goal of the framework is to make it as adaptive and easy to read on any devices, making sure that anyone can access the information from anywhere in the world. That's also why translation are such a big part of the project. To make the design work, much of the basic styles were taken from [Aplós](https://aplos.gxbs.me), the VitePress theme. With that creating simple blend cards as elements to create a visually appiling for of an website.
+
+## Template
+
+Aplóe is still in heavy development, once it's mature enough, and gets a stable release, a template will be created to make it easier to start a project with Aplóe. The template will include all the necessary files and configurations to start a project with Aplóe, and it will be easy to customize and extend. The template will also include a basic example of how to use the components and styles provided by Aplóe. More information about the template will be provided once it's ready.
