@@ -19,7 +19,7 @@ importers:
         version: 3.3.2
       sass:
         specifier: ^1.77.2
-        version: 1.77.4
+        version: 1.77.5
     devDependencies:
       '@types/node':
         specifier: ^20.12.12
@@ -1078,6 +1078,16 @@ packages:
       chokidar: 3.6.0
       immutable: 4.3.6
       source-map-js: 1.2.0
+
+  /sass@1.77.5:
+    resolution: {integrity: sha512-oDfX1mukIlxacPdQqNb6mV2tVCrnE+P3nVYioy72V5tlk56CPNcO4TCuFcaCRKKfJ1M3lH95CleRS+dVKL2qMg==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
+    dev: false
 
   /search-insights@2.14.0:
     resolution: {integrity: sha512-OLN6MsPMCghDOqlCtsIsYgtsC0pnwVTyT9Mu6A3ewOj1DxvzZF6COrn2g86E/c05xbktB0XN04m/t1Z+n+fTGw==}
