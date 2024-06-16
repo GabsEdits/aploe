@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import markdownItTaskLists from "@mdit/plugin-tasklist";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,7 +24,7 @@ export default defineConfig({
         { text: "Guide", link: "https://aplos.gxbs.me/guide/" },
         { text: "Demo", link: "/demo" },
         // To add more links, just add more objects to the array, with the text and link like so:
-        // { text: "Text (The text for the link)", link: "Link" },
+        // { text: "Text (The text for the link)", link: "Link" }
       ],
       git: "https://github.com/GabsEdits/aplos-template", // Link to the source code of your site, if your site isn't open source, you can remove this
     },
@@ -52,6 +53,10 @@ export default defineConfig({
       tipLabel: "Tip",
       dangerLabel: "⚠ Danger",
       infoLabel: "Info",
+    },
+
+    config: (md) => {
+      md.use(markdownItTaskLists);
     },
   },
   head: [

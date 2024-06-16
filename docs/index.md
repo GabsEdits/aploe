@@ -84,3 +84,19 @@ Aplóe is still in heavy development, once it's mature enough, and gets a stable
 - [Gabs](https://gxbs.me/) { #myself }
 
 </section>
+
+---
+
+## Other project information
+
+- It uses the [Semantic Versioning](https://semver.org/) system.
+- It's licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+### Roadmap
+
+- [x] Create the basic structure of the project.
+- [x] Create the basic components.
+- [ ] Support Dark Mode.
+- [ ] Create a template for the project.
+- [ ] Create configuration file for the project.
+- [ ] Create a documentation for the project.
