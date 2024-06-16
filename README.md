@@ -20,7 +20,7 @@ The project is also designed to be mobile-friendly, with a responsive design tha
 
 ## Configuration
 
-Aplóe is designed to be as easy to use as possible, with a simple configuration that can be easily customized. Each project based on Aplóe should provide an `aploe.config.mts` where the basic configuration is stored. 
+Aplóe is designed to be as easy to use as possible, with a simple configuration that can be easily customized. Each project based on Aplóe should provide an `aploe.config.mts` where the basic configuration is stored.
 
 **It's currently not implemented, but it's planned for the future, as the project is still in development.**
 
