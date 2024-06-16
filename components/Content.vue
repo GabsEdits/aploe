@@ -1,5 +1,5 @@
 <template>
-  <section id="content-element">
+  <section id="content-element" :style="'background-color:' + background">
     <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
       {{ icon }}
     </span>
@@ -15,6 +15,7 @@ defineProps({
   description: String,
   icon: String,
   iconColor: String,
+  background: String,
 });
 </script>
 
@@ -22,27 +23,26 @@ defineProps({
 #content-element {
   display: grid;
   place-items: center;
-  padding-top: 40px;
   margin: 20px 0;
   border-radius: 20px;
-  background-color: #e8ffdda6;
+  padding-top: 40px;
 
   h2 {
     font-size: 200%;
   }
 
   p {
-    font-size: medium;
     margin-top: 0.5%;
     margin-bottom: 30px;
+    font-size: medium;
   }
 
   #map {
     position: relative;
-    height: 700px;
+    margin-bottom: 25px;
     border-radius: 0 0 20px 20px;
     width: 100%;
-    margin-bottom: 25px;
+    height: 700px;
   }
 }
 </style>

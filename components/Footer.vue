@@ -82,24 +82,24 @@ defineProps({
 
 <style lang="scss">
 footer {
+  border-radius: 1.875rem 1.875rem 0 0;
   background-color: var(--footer-back);
   padding: 1rem;
   text-align: center;
-  border-radius: 30px 30px 0 0;
 
   .footer-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 1rem;
     gap: 0.625rem;
+    margin-bottom: 1rem;
   }
 
   .footer-links a {
+    margin: 0.5rem;
+    padding: 0.5rem;
     color: #333;
     text-decoration: none;
-    padding: 0.5rem;
-    margin: 0.5rem;
   }
 
   .footer-links a:hover {
@@ -107,10 +107,10 @@ footer {
   }
 
   .footer-social-link {
+    transition: color 0.3s;
+    margin: 0.5rem;
     color: #333;
     font-size: 1.5rem;
-    margin: 0.5rem;
-    transition: color 0.3s;
   }
 
   .footer-social-link:hover {
@@ -122,10 +122,10 @@ footer {
   }
 
   .footer-additional a {
+    transition: color 0.3s;
+    margin: 0.5rem;
     color: var(--hover-link-gray);
     text-decoration: none;
-    margin: 0.5rem;
-    transition: color 0.3s;
   }
 
   .footer-additional a:hover {
@@ -133,8 +133,8 @@ footer {
   }
 
   .footer-copyright {
-    font-size: medium;
     margin-top: 1rem;
+    font-size: medium;
   }
 
   .footer-copyright a {
@@ -143,24 +143,24 @@ footer {
 
   .made-by {
     margin-top: 1.25rem;
-    text-align: center;
     color: var(--black);
     font-weight: 600;
+    text-align: center;
   }
 
   .call-footer {
+    margin-top: 0.5%;
     font-weight: 600;
     font-size: 120%;
     text-align: center;
-    margin-top: 0.5%;
   }
 
   #footer-special-link {
-    color: var(--hover-link-gray);
-    margin-top: 25px;
+    margin-top: 1.5625rem;
     margin-bottom: 0;
-    padding: 14px;
-    font-size: 17px;
+    padding: 0.875rem;
+    color: var(--hover-link-gray);
+    font-size: 1.0625rem;
   }
 
   #footer-special-link:hover {
@@ -168,42 +168,42 @@ footer {
   }
 
   .author {
-    color: var(--black) !important;
-    margin-left: 0px !important;
-    text-decoration: underline 1.5px !important;
     transition: text-decoration 0.5s !important;
+    margin-left: 0 !important;
+    color: var(--black) !important;
     font-weight: 800;
+    text-decoration: underline 0.0938rem !important;
 
     &:hover {
-      text-decoration: underline green 1.5px !important;
       color: var(--black);
+      text-decoration: underline green 0.0938rem !important;
     }
   }
 
   .badges {
     position: absolute;
-    margin-top: 30px;
-    right: 10px;
-    width: 500px;
-    height: 56.25px;
-    margin-top: 30px;
+    right: 0.625rem;
+    margin-top: 1.875rem;
+    margin-top: 1.875rem;
+    width: 31.25rem;
+    height: 3.5156rem;
 
-    @media (max-width: 767px) {
-      aspect-ratio: 16/9;
-      object-fit: contain;
-      max-width: 80%;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
+    @media (max-width: 47.9375rem) {
       position: relative;
-      margin-bottom: 20px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      margin-bottom: 1.25rem;
+      aspect-ratio: 16/9;
+      max-width: 80%;
+      object-fit: contain;
     }
 
-    @media screen and (min-width: 775px) and (max-width: 1055px) {
+    @media screen and (min-width: 48.4375rem) and (max-width: 65.9375rem) {
       right: 0;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1154px) {
+    @media screen and (min-width: 48rem) and (max-width: 72.125rem) {
       display: none;
     }
   }

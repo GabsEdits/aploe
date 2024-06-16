@@ -1,6 +1,6 @@
-docs
+.gitattributes
 .github
 .gitignore
-.gitattributes
-.prettierrc
 .prettierignore
+.prettierrc
+docs

@@ -18,41 +18,41 @@ defineProps({
 
 <style lang="scss">
 #faq-section {
-  background-color: #2e2e2e;
-  text-align: center;
-  padding: 40px;
   border-radius: 20px;
+  background-color: #2e2e2e;
+  padding: 40px;
   color: var(--white);
+  text-align: center;
 
   article {
+    border-radius: 10px;
     background-color: #414141;
     padding: 30px;
-    border-radius: 10px;
   }
 
   h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
     margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
   }
 
   summary {
-    text-align: left;
+    color: #fff;
     font-size: 1.1rem;
     line-height: 1.5;
-    color: var(--faq-color);
+    text-align: left;
   }
 
   h2 {
-    font-size: 2rem;
     margin-bottom: 40px;
     color: #fff;
+    font-size: 2rem;
   }
 
   .questions {
+    grid-gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
   }
 }
 
@@ -64,8 +64,8 @@ defineProps({
 
 @media screen and (max-width: 1138px) and (min-width: 768px) {
   .questions {
-    grid-template-columns: repeat(2, 1fr) !important;
     grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 </style>

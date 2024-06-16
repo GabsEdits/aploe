@@ -106,32 +106,32 @@ header.scrolled {
 
 header {
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  height: 70px;
-  padding: 0 6%;
-  background-color: #ffffffed;
-  backdrop-filter: blur(10px);
   z-index: 2000;
-  line-height: n;
-  border-bottom: 0px solid #e7e7e7;
+  backdrop-filter: blur(0.625rem);
   animation: fadeInAnimation ease 1.5s;
-  transition: border-bottom 0.2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  transition: border-bottom 0.2s;
+  border-bottom: 0 solid #e7e7e7;
+  background-color: #ffffffed;
+  padding: 0 6%;
+  width: 100%;
+  height: 4.375rem;
+  line-height: normal;
 
-  @media (max-width: 767px) {
+  @media (max-width: 47.9375rem) {
+    position: fixed !important;
+    top: 0 !important;
     flex-direction: column !important;
     justify-content: center !important;
-    height: 7.5rem !important;
+    z-index: 2000 !important;
     padding: 1.25rem !important;
     width: 100% !important;
-    top: 0 !important;
-    position: fixed !important;
-    z-index: 2000 !important;
+    height: 7.5rem !important;
 
     h1 {
       margin-bottom: 0.625rem;
@@ -155,27 +155,27 @@ header {
     align-items: center;
 
     img:hover {
-      padding: 1px;
-      border-radius: 5px;
+      border-radius: 0.3125rem;
       background-color: #bebebe84;
+      padding: 0.0625rem;
     }
 
     sup {
-      margin-left: 5px;
       top: 0;
+      margin-left: 0.3125rem;
       font-weight: 700;
     }
   }
 
   ul {
     display: flex;
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
   }
 
   li:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 
   li:first-child {
@@ -186,23 +186,23 @@ header {
     transition: all 300ms;
 
     &:hover {
-      padding: 5px;
-      border-radius: 5px;
+      border-radius: 0.3125rem;
       background-color: #c1c1c184;
+      padding: 0.3125rem;
     }
   }
 
   .dropdown-content a:hover {
-    padding: 10px;
+    padding: 0.625rem;
   }
 
   .quick-office {
+    font-size: 0.9375rem;
     text-align: left !important;
-    font-size: 15px;
   }
 
   .quick-number {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .language-icon {
@@ -211,25 +211,25 @@ header {
 
   .language-icon::before,
   .language-icon::after {
-    content: "";
     position: absolute;
     top: 50%;
-    width: 1px;
-    height: 20px;
-    background-color: var(--silver);
     transform: translateY(-50%);
+    background-color: var(--silver);
+    width: 0.0625rem;
+    height: 1.25rem;
+    content: "";
   }
 
   .language-icon::before {
-    left: -10px;
+    left: -0.625rem;
   }
 
   .language-icon::after {
-    right: -10px;
+    right: -0.625rem;
   }
 
   #md {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 
@@ -240,32 +240,32 @@ header {
     display: none;
     position: absolute;
     top: 100%;
-    left: -13px;
-    width: max-content;
-    background-color: var(--white);
-    box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.25);
-    padding: 3px;
-    margin: 0;
-    list-style: none;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-top: 0px;
+    left: -0.8125rem;
     transition: all 3s;
+    margin: 0;
+    margin-top: 0;
+    box-shadow: 0 0.25rem 1.75rem 0rem rgba(0, 0, 0, 0.25);
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    padding: 0.1875rem;
+    width: max-content;
+    list-style: none;
 
     .divider {
-      border-top: 1px solid #ccc;
-      margin: 4px 20%;
+      margin: 0.25rem 20%;
+      border-top: 0.0625rem solid #ccc;
     }
 
     a {
       display: block;
-      padding: 10px;
+      padding: 0.625rem;
       color: var(--hover-link-gray);
-      text-decoration: none;
       text-align: center;
+      text-decoration: none;
 
       &:last-child {
-        margin-bottom: 4px;
+        margin-bottom: 0.25rem;
       }
 
       &:hover {
@@ -274,10 +274,10 @@ header {
     }
 
     h4 {
-      margin: 8px;
-      text-align: center;
-      font-size: 15px;
+      margin: 0.5rem;
       font-weight: 800;
+      font-size: 0.9375rem;
+      text-align: center;
     }
   }
 
@@ -287,10 +287,10 @@ header {
 }
 
 .quick-call {
-  margin-top: 500px;
-  font-size: 16px;
-  font-weight: 600;
+  margin-top: 31.25rem;
   color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
 
   a {
     color: var(--quick-call-color) !important;
@@ -313,7 +313,7 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .quick-call {
     margin-top: 50rem !important;
   }

@@ -3,10 +3,10 @@ version: 2
 updates:
   - package-ecosystem: npm
     schedule:
-      interval: "daily"
-    directory: "/"
+      interval: daily
+    directory: /
 
   - package-ecosystem: npm
     schedule:
-      interval: "daily"
-    directory: "docs/"
+      interval: daily
+    directory: docs/

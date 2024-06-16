@@ -10,11 +10,11 @@
 }
 
 .hide-on-mobile {
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     display: none;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 48.0625rem) {
     display: block;
   }
 }

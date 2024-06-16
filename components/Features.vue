@@ -21,15 +21,15 @@ defineProps({
 
 <style lang="scss">
 #features {
-  background-color: #c5dde85f;
+  margin-bottom: 20px;
   border-radius: 20px;
+  background-color: #c5dde85f;
   padding: 3.125rem 0;
   text-align: center;
-  margin-bottom: 20px;
 
   h2 {
-    font-size: 2rem;
     margin-bottom: 1.25rem;
+    font-size: 2rem;
   }
 
   ul {
@@ -47,19 +47,19 @@ defineProps({
   }
 
   li {
-    background-color: #c5dde86e;
     border-radius: 10px;
+    background-color: #c5dde86e;
     padding: 1.25rem;
 
     p {
-      font-size: 1.0625rem;
       margin-bottom: 0.625rem;
+      font-size: 1.0625rem;
     }
 
     i {
-      font-size: 3.125rem;
       margin-bottom: 1.25rem;
       color: var(--boek-green-3);
+      font-size: 3.125rem;
     }
   }
 }

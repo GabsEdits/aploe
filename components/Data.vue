@@ -11,7 +11,6 @@
 
 <script>
 export default {
-  name: "LiveTrucks",
   props: {
     title: {
       type: String,
@@ -23,7 +22,7 @@ export default {
     },
     api: {
       type: String,
-      default: "https://api.boekestijntransport.com:50125/api/get_trucks",
+      default: "https://api.example.com/data",
     },
     fallback: {
       type: String,
@@ -93,48 +92,48 @@ export default {
 
 <style lang="scss">
 #data {
-  color: var(--black);
   display: grid;
   place-items: center;
   gap: 0px;
-  padding: 60px;
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  margin: 1.25rem 0;
+  border-radius: 1.25rem;
+  padding: 3.75rem;
+  color: var(--black);
   text-align: center;
-  margin: 20px 0;
-  border-radius: 20px;
 
   h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+    font-size: 1.125rem;
   }
 
   #apiData {
-    margin: 0 auto;
-    padding: 5px 45px;
-    border-radius: 40px;
-    font-size: 30px;
-    font-weight: 900;
-    background-color: #2b2b2b;
-    color: #fff;
     display: inline-block;
+    margin: 0 auto;
+    border-radius: 2.5rem;
+    background-color: #2b2b2b;
+    padding: 0.3125rem 2.8125rem;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.875rem;
   }
 
   .icon {
-    font-size: 60px;
-    margin-bottom: 10px;
     cursor: default;
+    margin-bottom: 0.625rem;
+    font-size: 3.75rem;
   }
 }
 
 .icon {
-  font-size: 55px;
-  margin-bottom: 10px;
   cursor: default;
+  margin-bottom: 0.625rem;
+  font-size: 3.4375rem;
 }
 </style>

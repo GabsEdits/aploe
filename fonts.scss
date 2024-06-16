@@ -3,10 +3,10 @@
 @import url("non.geist/mono");
 
 :root {
-  font-family: Inter, sans-serif;
   font-feature-settings:
     "liga" 1,
     "calt" 1;
+  font-family: Inter, sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
@@ -20,16 +20,16 @@
 }
 
 .material-symbols-rounded {
+  display: inline-block;
+  vertical-align: middle;
   font-variation-settings:
     "FILL" 1,
     "wght" 400,
     "GRAD" 0,
     "opsz" 24;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 code {
-  font-family: "Geist Mono Variable";
   font-weight: 500;
+  font-family: "Geist Mono Variable";
 }

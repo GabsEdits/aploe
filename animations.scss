@@ -3,8 +3,8 @@
 }
 
 .onFocus {
-  opacity: 0;
   transform: translateX(0);
+  opacity: 0;
   transition:
     opacity 0.5s ease-in-out,
     transform 0.5s ease-in-out;
@@ -26,13 +26,13 @@
 
 @keyframes fadeInLeft {
   from {
-    opacity: 0;
     transform: translateX(-100%);
+    opacity: 0;
   }
 
   to {
-    opacity: 1;
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -42,13 +42,13 @@
 
 @keyframes fadeInRight {
   from {
-    opacity: 0;
     transform: translateX(100%);
+    opacity: 0;
   }
 
   to {
-    opacity: 1;
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -72,13 +72,13 @@
 
 @keyframes fadeOutLeft {
   from {
-    opacity: 1;
     transform: translateX(0);
+    opacity: 1;
   }
 
   to {
-    opacity: 0;
     transform: translateX(-100%);
+    opacity: 0;
   }
 }
 
@@ -88,13 +88,13 @@
 
 @keyframes fadeOutRight {
   from {
-    opacity: 1;
     transform: translateX(0);
+    opacity: 1;
   }
 
   to {
-    opacity: 0;
     transform: translateX(100%);
+    opacity: 0;
   }
 }
 
@@ -104,13 +104,13 @@
 
 @keyframes bounceIn {
   from {
-    opacity: 0;
     transform: scale(0.3);
+    opacity: 0;
   }
 
   50% {
-    opacity: 1;
     transform: scale(1.05);
+    opacity: 1;
   }
 
   to {
@@ -124,13 +124,13 @@
 
 @keyframes bounceInLeft {
   from {
-    opacity: 0;
     transform: translateX(-300%);
+    opacity: 0;
   }
 
   50% {
-    opacity: 1;
     transform: translateX(25%);
+    opacity: 1;
   }
 
   to {
@@ -144,13 +144,13 @@
 
 @keyframes bounceInRight {
   from {
-    opacity: 0;
     transform: translateX(300%);
+    opacity: 0;
   }
 
   50% {
-    opacity: 1;
     transform: translateX(-25%);
+    opacity: 1;
   }
 
   to {
@@ -169,13 +169,13 @@
 
   50%,
   55% {
-    opacity: 1;
     transform: scale(1.1);
+    opacity: 1;
   }
 
   to {
-    opacity: 0;
     transform: scale(0.3);
+    opacity: 0;
   }
 }
 
@@ -185,13 +185,13 @@
 
 @keyframes bounceOutLeft {
   20% {
-    opacity: 1;
     transform: translateX(20%);
+    opacity: 1;
   }
 
   to {
-    opacity: 0;
     transform: translateX(-200%);
+    opacity: 0;
   }
 }
 
@@ -201,13 +201,13 @@
 
 @keyframes bounceOutRight {
   20% {
-    opacity: 1;
     transform: translateX(-20%);
+    opacity: 1;
   }
 
   to {
-    opacity: 0;
     transform: translateX(200%);
+    opacity: 0;
   }
 }
 

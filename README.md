@@ -1,8 +1,6 @@
 <div align="center">
 <h1>Aplóe</h1>
-
-Lightweight and minimalistic Vue.js components and styles for informational websites
-
+<small>Lightweight and Minimalistic Vue.js Components and Styles for Informational Websites</small>
 </div>
 
 - **🎨** Purposefully designed lightweight and minimalistic design language.

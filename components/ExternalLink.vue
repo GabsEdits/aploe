@@ -35,31 +35,31 @@ defineProps({
 
 <style lang="scss">
 .external {
-  color: var(--black);
-  border-radius: 20px;
   display: grid;
   place-items: center;
-  gap: 0px;
-  padding: 60px;
+  gap: 0;
+  border-radius: 1.25rem;
+  padding: 3.75rem;
+  color: var(--black);
   text-align: center;
 
   h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   p {
-    font-size: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
   }
 
   a {
     display: inline-block;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
+    border-radius: 0.625rem;
+    padding: 0.75rem 1.875rem;
     color: #000;
-    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-decoration: none;
   }
 }
 </style>
