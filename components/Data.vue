@@ -12,36 +12,37 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 
-defineProps<({
-  title: {
-    type: String,
-    default: "data.title",
-  },
-  description: {
-    type: String,
-    default: "data.desc",
-  },
-  api: {
-    type: String,
-    default: "https://api.example.com/data",
-  },
-  fallback: {
-    type: String,
-    default: "1000",
-  },
-  icon: {
-    type: String,
-    default: "car",
-  },
-  background: {
-    type: String,
-    default: "#fff",
-  },
-  iconColor: {
-    type: String,
-    default: "#000",
-  },
-});
+defineProps <
+  {
+    title: {
+      type: String,
+      default: "data.title",
+    },
+    description: {
+      type: String,
+      default: "data.desc",
+    },
+    api: {
+      type: String,
+      default: "https://api.example.com/data",
+    },
+    fallback: {
+      type: String,
+      default: "1000",
+    },
+    icon: {
+      type: String,
+      default: "car",
+    },
+    background: {
+      type: String,
+      default: "#fff",
+    },
+    iconColor: {
+      type: String,
+      default: "#000",
+    },
+  };
 
 const apiData = ref("");
 
