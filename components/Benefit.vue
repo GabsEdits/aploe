@@ -10,12 +10,9 @@
   </li>
 </template>
 
-<script>
-export default {
-  name: "Benefit",
-  props: {
-    icon: String,
-    title: String,
-  },
-};
+<script setup lang="ts">
+defineProps({
+  icon: String,
+  title: String,
+});
 </script>

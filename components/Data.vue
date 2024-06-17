@@ -1,93 +1,70 @@
 <template>
   <section id="data" :style="'background-color:' + background">
     <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
-      {{ dataIcon }}
+      {{ icon }}
     </span>
-    <h2>{{ $t(dataTitle) }}</h2>
-    <p>{{ $t(dataDescription) }}</p>
+    <h2>{{ $t(title) }}</h2>
+    <p>{{ $t(description) }}</p>
     <span id="apiData">{{ apiData }}</span>
   </section>
 </template>
 
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      default: "data.title",
-    },
-    description: {
-      type: String,
-      default: "data.desc",
-    },
-    api: {
-      type: String,
-      default: "https://api.example.com/data",
-    },
-    fallback: {
-      type: String,
-      default: "1000",
-    },
-    icon: {
-      type: String,
-      default: "car",
-    },
-    background: {
-      type: String,
-      default: "#fff",
-    },
-    iconColor: {
-      type: String,
-      default: "#000",
-    },
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+
+defineProps<({
+  title: {
+    type: String,
+    default: "data.title",
   },
-  computed: {
-    dataTitle() {
-      return this.title;
-    },
-    dataDescription() {
-      return this.description;
-    },
-    dataApi() {
-      return this.api;
-    },
-    dataFallback() {
-      return this.fallback;
-    },
-    dataBackground() {
-      return this.background;
-    },
-    dataIcon() {
-      return this.icon;
-    },
+  description: {
+    type: String,
+    default: "data.desc",
   },
-  data() {
-    return {
-      apiData: "",
-    };
+  api: {
+    type: String,
+    default: "https://api.example.com/data",
   },
-  mounted() {
-    this.fetchTruckData();
+  fallback: {
+    type: String,
+    default: "1000",
   },
-  methods: {
-    fetchTruckData() {
-      fetch(this.dataApi)
-        .then((response) => response.json())
-        .then((data) => {
-          if (data && data.data) {
-            this.apiData = data.data;
-          } else {
-            this.apiData = this.dataFallback;
-          }
-          console.log("data: " + this.apiData);
-        })
-        .catch((error) => {
-          console.error("Error fetching truck data:", error);
-          this.apiData = this.dataFallback;
-        });
-    },
+  icon: {
+    type: String,
+    default: "car",
   },
-};
+  background: {
+    type: String,
+    default: "#fff",
+  },
+  iconColor: {
+    type: String,
+    default: "#000",
+  },
+});
+
+const apiData = ref("");
+
+onMounted(() => {
+  fetchTruckData();
+});
+
+function fetchTruckData() {
+  fetch(api)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data && data.data) {
+        apiData.value = data.data;
+      } else {
+        apiData.value = fallback;
+      }
+      console.log("data: " + apiData.value);
+    })
+    .catch((error) => {
+      console.error("Error fetching truck data:", error);
+      apiData.value = fallback;
+    });
+}
 </script>
 
 <style lang="scss">
