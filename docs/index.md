@@ -89,13 +89,15 @@ Aplóe is still in heavy development, once it's mature enough, and gets a stable
 
 ## Other Project Information
 
-- It uses the [Semantic Versioning](https://semver.org/) system.
+- It uses the [Semantic Versioning](https://semver.org/) system (once it hits the stable release, `v1.0.0`).
 - It's licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ### Roadmap
 
 - [x] Create the basic structure of the project.
 - [x] Create the basic components.
+- [x] Create the basic styles.
+- [ ] Remove all junk styles and classes
 - [ ] Support Dark Mode.
 - [ ] Create a template for the project.
 - [ ] Create configuration file for the project.

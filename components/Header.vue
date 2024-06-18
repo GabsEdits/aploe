@@ -196,7 +196,7 @@ header {
     padding: 0.625rem;
   }
 
-  .quick-office {
+  .quick-info {
     font-size: 0.9375rem;
     text-align: left !important;
   }
@@ -298,7 +298,7 @@ header {
 }
 
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
-  .quick-office {
+  .quick-info {
     display: none;
   }
 }
