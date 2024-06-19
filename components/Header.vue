@@ -9,7 +9,11 @@
     <slot name="extraInfo"></slot>
     <ul>
       <template v-for="item in dropdownItems">
-        <li v-if="item.type === 'dropdown'" class="dropdown" @mouseleave="hideDropdown(item.slotName)">
+        <li
+          v-if="item.type === 'dropdown'"
+          class="dropdown"
+          @mouseleave="hideDropdown(item.slotName)"
+        >
           <a @click="toggleDropdown(item.slotName)">
             <slot :name="item.slotName"></slot>
           </a>

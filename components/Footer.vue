@@ -13,11 +13,27 @@
       </template>
     </nav>
     <div class="footer-additional">
-      <a :href="facebook" v-if="facebook" aria-label="Check out the Facebook Page"><i class="fab fa-facebook"></i></a>
-      <a :href="linkedin" v-if="linkedin" aria-label="Check out our LinkedIn Page"><i class="fab fa-linkedin"></i></a>
-      <a :href="github" v-if="github" aria-label="Check out the source code"><i class="fab fa-github"></i></a>
-      <a :href="instagram" v-if="instagram" aria-label="Check out our Instagram Page"><i
-          class="fab fa-instagram"></i></a>
+      <a
+        :href="facebook"
+        v-if="facebook"
+        aria-label="Check out the Facebook Page"
+        ><i class="fab fa-facebook"></i
+      ></a>
+      <a
+        :href="linkedin"
+        v-if="linkedin"
+        aria-label="Check out our LinkedIn Page"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a :href="github" v-if="github" aria-label="Check out the source code"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a
+        :href="instagram"
+        v-if="instagram"
+        aria-label="Check out our Instagram Page"
+        ><i class="fab fa-instagram"></i
+      ></a>
       <router-link to="/privacy">Privacy Policy</router-link>
       <p class="made-by">
         Made with ❤️ by
