@@ -55,12 +55,6 @@ defineProps({
       margin-bottom: 0.625rem;
       font-size: 1.0625rem;
     }
-
-    i {
-      margin-bottom: 1.25rem;
-      color: var(--boek-green-3);
-      font-size: 3.125rem;
-    }
   }
 }
 </style>

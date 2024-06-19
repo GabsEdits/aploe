@@ -21,27 +21,8 @@ defineProps({
   border-radius: 20px;
   background-color: #2e2e2e;
   padding: 40px;
-  color: var(--white);
+  color: #fff;
   text-align: center;
-
-  article {
-    border-radius: 10px;
-    background-color: #414141;
-    padding: 30px;
-  }
-
-  h3 {
-    margin-bottom: 15px;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-
-  summary {
-    color: #fff;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    text-align: left;
-  }
 
   h2 {
     margin-bottom: 40px;
@@ -53,19 +34,34 @@ defineProps({
     grid-gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  }
-}
 
-@media (max-width: 768px) {
-  .questions {
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
-}
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
 
-@media screen and (max-width: 1138px) and (min-width: 768px) {
-  .questions {
-    grid-gap: 10px;
-    grid-template-columns: repeat(2, 1fr) !important;
+    @media screen and (max-width: 1138px) and (min-width: 768px) {
+      grid-gap: 10px;
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
+  article {
+    border-radius: 10px;
+    background-color: #414141;
+    padding: 30px;
+
+    h3 {
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    summary {
+      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      text-align: left;
+    }
   }
 }
 </style>

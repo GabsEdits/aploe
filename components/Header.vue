@@ -9,12 +9,8 @@
     <slot name="extraInfo"></slot>
     <ul>
       <template v-for="item in dropdownItems">
-        <li
-          v-if="item.type === 'dropdown'"
-          class="dropdown"
-          @mouseleave="hideDropdown(item.slotName)"
-        >
-          <a @click="toggleDropdown(item.slotName)" id="ignore-link">
+        <li v-if="item.type === 'dropdown'" class="dropdown" @mouseleave="hideDropdown(item.slotName)">
+          <a @click="toggleDropdown(item.slotName)">
             <slot :name="item.slotName"></slot>
           </a>
           <div class="dropdown-content" v-if="isDropdownVisible(item.slotName)">
@@ -22,18 +18,13 @@
           </div>
         </li>
         <li v-else-if="item.type === 'link'">
-          <a :href="item.href" style="cursor: pointer" class="locationmobile">
+          <a :href="item.href">
             <slot :name="item.slotName"></slot>
           </a>
         </li>
       </template>
       <li class="dropdown" @mouseleave="hideLanguageDropdown">
-        <a
-          style="cursor: pointer"
-          class="language-icon"
-          @click="toggleLanguageDropdown"
-          href="#"
-        >
+        <a class="language-icon" @click="toggleLanguageDropdown" href="#">
           {{ $t("header.language") }} <i class="fa fa-angle-down"></i>
         </a>
         <div class="dropdown-content" v-if="showLanguageDropdown">
@@ -100,10 +91,6 @@ defineProps({
 </script>
 
 <style lang="scss">
-header.scrolled {
-  border-bottom: 1.2px solid #e7e7e7;
-}
-
 header {
   display: flex;
   position: fixed;
@@ -123,6 +110,10 @@ header {
   height: 4.375rem;
   line-height: normal;
 
+  &.scrolled {
+    border-bottom: 1.2px solid #e7e7e7;
+  }
+
   @media (max-width: 47.9375rem) {
     position: fixed !important;
     top: 0 !important;
@@ -132,27 +123,28 @@ header {
     padding: 1.25rem !important;
     width: 100% !important;
     height: 7.5rem !important;
-
-    h1 {
-      margin-bottom: 0.625rem;
-    }
-
-    nav {
-      margin-top: 1.25rem;
-    }
   }
 
   a {
-    color: var(--link-gray);
+    color: #555;
+    cursor: pointer;
 
     &:hover {
-      color: var(--hover-link-gray);
+      color: #333;
     }
   }
 
   h1 {
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 79.6875rem) and (max-width: 91rem) {
+      margin-top: 0.625rem;
+    }
+
+    @media (max-width: 47.9375rem) {
+      margin-bottom: 0.625rem;
+    }
 
     img:hover {
       border-radius: 0.3125rem;
@@ -164,6 +156,10 @@ header {
       top: 0;
       margin-left: 0.3125rem;
       font-weight: 700;
+
+      @media screen and (min-width: 79.6875rem) and (max-width: 91rem) {
+        display: none;
+      }
     }
   }
 
@@ -172,33 +168,36 @@ header {
     margin: 0;
     padding: 0;
     list-style: none;
-  }
 
-  li:not(:first-child) {
-    margin-left: 1.25rem;
-  }
+    li {
+      &:not(:first-child) {
+        margin-left: 1.25rem;
+      }
 
-  li:first-child {
-    margin-left: 0;
-  }
+      &:first-child {
+        margin-left: 0;
+      }
 
-  li a {
-    transition: all 300ms;
+      a {
+        transition: all 300ms;
+        cursor: pointer;
 
-    &:hover {
-      border-radius: 0.3125rem;
-      background-color: #c1c1c184;
-      padding: 0.3125rem;
+        &:hover {
+          border-radius: 0.3125rem;
+          background-color: #c1c1c184;
+          padding: 0.3125rem;
+        }
+      }
+
+      .quick-info {
+        font-size: 0.9375rem;
+        text-align: left !important;
+
+        @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+          display: none;
+        }
+      }
     }
-  }
-
-  .dropdown-content a:hover {
-    padding: 0.625rem;
-  }
-
-  .quick-info {
-    font-size: 0.9375rem;
-    text-align: left !important;
   }
 
   .quick-number {
@@ -207,25 +206,25 @@ header {
 
   .language-icon {
     position: relative;
-  }
 
-  .language-icon::before,
-  .language-icon::after {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--silver);
-    width: 0.0625rem;
-    height: 1.25rem;
-    content: "";
-  }
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--silver);
+      width: 0.0625rem;
+      height: 1.25rem;
+      content: "";
+    }
 
-  .language-icon::before {
-    left: -0.625rem;
-  }
+    &::before {
+      left: -0.625rem;
+    }
 
-  .language-icon::after {
-    right: -0.625rem;
+    &::after {
+      right: -0.625rem;
+    }
   }
 
   #md {
@@ -235,6 +234,12 @@ header {
 
 .dropdown {
   position: relative;
+
+  &:hover {
+    .dropdown-content {
+      display: block;
+    }
+  }
 
   .dropdown-content {
     display: none;
@@ -247,7 +252,7 @@ header {
     box-shadow: 0 0.25rem 1.75rem 0rem rgba(0, 0, 0, 0.25);
     border: 0.0625rem solid #ddd;
     border-radius: 0.5rem;
-    background-color: var(--white);
+    background-color: #fff;
     padding: 0.1875rem;
     width: max-content;
     list-style: none;
@@ -260,7 +265,7 @@ header {
     a {
       display: block;
       padding: 0.625rem;
-      color: var(--hover-link-gray);
+      color: #a9a9a9;
       text-align: center;
       text-decoration: none;
 
@@ -269,7 +274,8 @@ header {
       }
 
       &:hover {
-        background-color: var(--test-drive-mobile-background-2);
+        background-color: #e0e0e0;
+        padding: 0.625rem;
       }
     }
 
@@ -280,41 +286,19 @@ header {
       text-align: center;
     }
   }
-
-  &:hover .dropdown-content {
-    display: block;
-  }
 }
 
 .quick-call {
   margin-top: 31.25rem;
-  color: var(--white);
+  color: #fff;
   font-weight: 600;
   font-size: 1rem;
 
   a {
-    color: var(--quick-call-color) !important;
-  }
-}
-
-@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
-  .quick-info {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 79.6875rem) and (max-width: 91rem) {
-  .md {
-    display: none;
+    color: #dadada !important;
   }
 
-  header h1 {
-    margin-top: 0.625rem;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .quick-call {
+  @media screen and (min-width: 48rem) {
     margin-top: 50rem !important;
   }
 }

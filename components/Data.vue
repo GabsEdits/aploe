@@ -12,37 +12,36 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 
-defineProps <
-  {
-    title: {
-      type: String,
-      default: "data.title",
-    },
-    description: {
-      type: String,
-      default: "data.desc",
-    },
-    api: {
-      type: String,
-      default: "https://api.example.com/data",
-    },
-    fallback: {
-      type: String,
-      default: "1000",
-    },
-    icon: {
-      type: String,
-      default: "car",
-    },
-    background: {
-      type: String,
-      default: "#fff",
-    },
-    iconColor: {
-      type: String,
-      default: "#000",
-    },
-  };
+defineProps({
+  title: {
+    type: String,
+    default: "data.title",
+  },
+  description: {
+    type: String,
+    default: "data.desc",
+  },
+  api: {
+    type: String,
+    default: "https://api.example.com/data",
+  },
+  fallback: {
+    type: String,
+    default: "1000",
+  },
+  icon: {
+    type: String,
+    default: "car",
+  },
+  background: {
+    type: String,
+    default: "#fff",
+  },
+  iconColor: {
+    type: String,
+    default: "#000",
+  },
+});
 
 const apiData = ref("");
 
@@ -100,12 +99,6 @@ function fetchTruckData() {
     color: #fff;
     font-weight: 900;
     font-size: 1.875rem;
-  }
-
-  .icon {
-    cursor: default;
-    margin-bottom: 0.625rem;
-    font-size: 3.75rem;
   }
 }
 
