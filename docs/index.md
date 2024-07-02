@@ -12,20 +12,20 @@ Lightweight and Minimalistic Vue.js Components and Styles for Informational Webs
 - **🏗️** Modern Components with extensive customization options.
 - **📱** Mobile-friendly design language and components.
 - **🖋️** Utilizes premium fonts: Inter for text and Geist Mono for code snippets.
-- **🌐** Easy translations, optimized for `vue-i18n`
-- **🔧** Built for Vue.js 3 projects with Vite.
+- **🖌️** Equipped with modern and clean page styles.
+- **🌐** Easy translations, optimized for Vue I18n.
 
 </section>
 
 ## Technologies
 
-Aplóe is meant to be quick and easy, that's why it's built for Vue.js 3 projects with Vite. The project is build with TypeScript, and it's optimized for `vue-i18n` for translations. The design is based on the Aplós theme, and it uses the Inter font for text and Geist Mono for code snippets.
+Aplóe is meant to be quick and easy, that's why it's built for Vue.js 3 projects with Vite. The project is build with TypeScript, and it's optimized for [Vue I18n](https://www.npmjs.com/package/vue-i18n) for translations. The design is based on the Aplós theme, and it uses the Inter font for text and Geist Mono for code snippets.
 
 The project is also designed to be mobile-friendly, with a responsive design that works on any device.
 
 ## Configuration
 
-Aplóe is designed to be as easy to use as possible, with a simple configuration that can be easily customized. Each project based on Aplóe should provide an `aploe.config.mts` where the basic configuration is stored.
+Aplóe is designed to be as easy to use as possible, with a simple configuration that can be easily customized. Each project based on Aplóe will provide an `.env.aploe` file where the basic configuration will be stored.
 
 **It's currently not implemented, but it's planned for the future, as the project is still in development.**
 
@@ -76,7 +76,7 @@ By it's words, Aplóe includes a design language, following specific styles to m
 
 Aplóe is still in heavy development, once it's mature enough, and gets a stable release, a template will be created to make it easier to start a project with Aplóe. The template will include all the necessary files and configurations to start a project with Aplóe, and it will be easy to customize and extend. The template will also include a basic example of how to use the components and styles provided by Aplóe. More information about the template will be provided once it's ready.
 
-## Sponsors
+## Contributors
 
 <section class="usedby">
 

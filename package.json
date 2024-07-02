@@ -21,6 +21,7 @@
   },
   "homepage": "https://aploe.gxbs.me",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "inter-ui": "^4.0.2",
     "non.geist": "^1.0.3",
     "prettier": "^3.3.0",
