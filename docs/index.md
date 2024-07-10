@@ -42,8 +42,7 @@ Aplóe offers a wide range of customizable components. With just a single elemen
   fallback="1000"
   background="#c0e2de83"
   iconColor="green"
->
-</CarData>
+/>
 ```
 
 The example above is a simple component that displays specific content from an API. There are also other components, such as `ExternalLink` that is an component with a link to an page/website, like this:
@@ -56,8 +55,7 @@ The example above is a simple component that displays specific content from an A
   icon="globe"
   background="#c0e2de83"
   iconColor="green"
->
-</ExternalLink>
+/>
 ```
 
 All elements are designed for easy translation, with the `title` and `description` being connected to the `vue-i18n` library.
