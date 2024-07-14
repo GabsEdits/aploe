@@ -24,12 +24,12 @@
     "dotenv": "^16.4.5",
     "inter-ui": "^4.0.2",
     "non.geist": "^1.0.3",
-    "prettier": "^3.3.0",
-    "sass": "^1.77.5",
-    "vue": "^3.4.29"
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "vue": "^3.4.31"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12"
+    "@types/node": "^20.14.10"
   },
   "scripts": {
     "docs:dev": "pnpm --filter=./docs run dev",
