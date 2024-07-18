@@ -1,10 +1,6 @@
----
-pageClass: home
----
+# Aplóe
 
-# Aplóe {.center #title}
-
-Lightweight and Minimalistic Vue.js Components and Styles for Informational Websites {.center #desc}
+Lightweight and Minimalistic Vue.js Components and Styles for Informational Websites
 
 - **🎨** Purposefully designed lightweight and minimalistic design language.
 - **🏗️** Modern Components with extensive customization options.
@@ -70,7 +66,7 @@ Aplóe is still in heavy development, once it's mature enough, and gets a stable
 
 ## Other Project Information
 
-- It uses the [Semantic Versioning](https://semver.org/) system (once it hits the stable release, `v1.0.0`).
+- It uses the [Semantic Versioning](https://semver.org/) system.
 - It's licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ### Roadmap

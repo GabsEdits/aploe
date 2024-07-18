@@ -87,7 +87,7 @@ Aplóe is still in heavy development, once it's mature enough, and gets a stable
 
 ## Other Project Information
 
-- It uses the [Semantic Versioning](https://semver.org/) system (once it hits the stable release, `v1.0.0`).
+- It uses the [Semantic Versioning](https://semver.org/) system.
 - It's licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ### Roadmap
