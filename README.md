@@ -1,13 +1,14 @@
-# Aplóe
+<div align="center">
+  <h1>Aplóe</h1>
+  <p>Lightweight and Minimalistic Vue.js Components and Styles for Informational Websites</p>
+</div>
 
-Lightweight and Minimalistic Vue.js Components and Styles for Informational Websites
-
-- **🎨** Purposefully designed lightweight and minimalistic design language.
-- **🏗️** Modern Components with extensive customization options.
-- **📱** Mobile-friendly design language and components.
-- **🖋️** Utilizes premium fonts: Inter for text and Geist Mono for code snippets.
-- **🖌️** Equipped with modern and clean page styles.
-- **🌐** Easy translations, optimized for Vue I18n.
+- Purposefully designed lightweight and minimalistic design language.
+- Modern Components with extensive customization options.
+- Mobile-friendly design language and components.
+- Utilizes premium fonts: Inter for text and Geist Mono for code snippets.
+- Equipped with modern and clean page styles.
+- Easy translations, optimized for Vue I18n.
 
 ## Technologies
 
