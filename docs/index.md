@@ -29,6 +29,24 @@ Aplóe is designed to be as easy to use as possible, with a simple configuration
 
 **It's currently not implemented, but it's planned for the future, as the project is still in development.**
 
+## Translations
+
+Aplóe is designed to be easily translated into any language using Vue I18n. But, it's optional, by setting `translations` to `false` in the component, you can disable translations for that specific component. Here's an example:
+
+```vue
+<ExternalLink
+  title="External Link"
+  description="This is an external link"
+  link="https://example.org/"
+  icon="globe"
+  background="#c0e2de83"
+  iconColor="green"
+  translations="false"
+>
+```
+
+In the future, there will be a setting to disable translations for the entire project.
+
 ## Structure
 
 Aplóe offers a wide range of customizable components. With just a single element, you can easily customize these components to suit your needs. Here's an example:
@@ -42,6 +60,7 @@ Aplóe offers a wide range of customizable components. With just a single elemen
   fallback="1000"
   background="#c0e2de83"
   iconColor="green"
+  translations="true"
 />
 ```
 
@@ -55,6 +74,7 @@ The example above is a simple component that displays specific content from an A
   icon="globe"
   background="#c0e2de83"
   iconColor="green"
+  translations="true"
 />
 ```
 
@@ -95,6 +115,7 @@ Aplóe is still in heavy development, once it's mature enough, and gets a stable
 - [x] Create the basic structure of the project.
 - [x] Create the basic components.
 - [x] Create the basic styles.
+- [x] Make translations optional.
 - [ ] Remove all junk styles and classes
 - [ ] Support Dark Mode.
 - [ ] Create a template for the project.

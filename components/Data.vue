@@ -3,8 +3,8 @@
     <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
       {{ icon }}
     </span>
-    <h2>{{ $t(title) }}</h2>
-    <p>{{ $t(description) }}</p>
+    <h2>{{ translatable ? $t(title) : title }}</h2>
+    <p>{{ translatable ? $t(description) : description }}</p>
     <span id="apiData">{{ apiData }}</span>
   </section>
 </template>
@@ -40,6 +40,10 @@ defineProps({
   iconColor: {
     type: String,
     default: "#000",
+  },
+  translatable: {
+    type: Boolean,
+    default: false,
   },
 });
 

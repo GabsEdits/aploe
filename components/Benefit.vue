@@ -3,7 +3,7 @@
     <span class="material-symbols-rounded icon">
       {{ icon }}
     </span>
-    <h3 v-if="title">{{ $t(title) }}</h3>
+    <h3 v-if="title">{{ translatable ? $t(title) : title }}}</h3>
     <p>
       <slot></slot>
     </p>
@@ -14,5 +14,6 @@
 defineProps({
   icon: String,
   title: String,
+  translatable: Boolean,
 });
 </script>

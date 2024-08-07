@@ -3,7 +3,7 @@
     <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
       help
     </span>
-    <h2>{{ $t(title) }}</h2>
+    <h2>{{ translatable ? $t(title) : title }}</h2>
     <div class="questions">
       <slot></slot>
     </div>
@@ -13,6 +13,7 @@
 <script setup lang="ts">
 defineProps({
   title: String,
+  translatable: Boolean,
 });
 </script>
 

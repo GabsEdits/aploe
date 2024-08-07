@@ -29,7 +29,7 @@
       </template>
       <li class="dropdown" @mouseleave="hideLanguageDropdown">
         <a class="language-icon" @click="toggleLanguageDropdown" href="#">
-          {{ $t("header.language") }} <i class="fa fa-angle-down"></i>
+        {{ translatable ? $t("header.language") : language }} <i class="fa fa-angle-down"></i>
         </a>
         <div class="dropdown-content" v-if="showLanguageDropdown">
           <slot name="languages"></slot>
@@ -91,6 +91,8 @@ defineProps({
     type: Array,
     required: true,
   },
+  translatable: Boolean,
+  language: String,
 });
 </script>
 
