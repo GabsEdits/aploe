@@ -42,7 +42,7 @@ Aplóe is designed to be easily translated into any language using Vue I18n. But
   background="#c0e2de83"
   iconColor="green"
   translations="false"
->
+></ExternalLink>
 ```
 
 In the future, there will be a setting to disable translations for the entire project.
