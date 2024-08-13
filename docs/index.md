@@ -121,3 +121,5 @@ Aplóe is still in heavy development, once it's mature enough, and gets a stable
 - [ ] Create a template for the project.
 - [ ] Create configuration file for the project.
 - [ ] Create a documentation for the project.
+
+When all of the above tasks are completed, the project will get the release candidate status, and it will be ready for the first stable release.
