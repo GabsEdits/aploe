@@ -1,6 +1,6 @@
 <template>
-  <section id="data" :style="'background-color:' + background">
-    <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
+  <section id="data" :style="backgroundColor">
+    <span class="material-symbols-rounded icon" :style="iconColor">
       {{ icon }}
     </span>
     <h2>{{ translatable ? $t(title) : title }}</h2>
@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 
 const props = defineProps<{
   title?: string;
@@ -19,7 +19,9 @@ const props = defineProps<{
   fallback?: string;
   icon?: string;
   background?: string;
+  backgroundDark?: string;
   iconColor?: string;
+  iconColorDark?: string;
   translatable?: boolean;
 }>();
 
@@ -45,11 +47,23 @@ function fetchData() {
 onMounted(() => {
   fetchData();
 });
+
+const backgroundColor = computed(() => {
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return {
+    backgroundColor: darkMode ? props.backgroundDark : props.background,
+  };
+});
+
+const iconColor = computed(() => {
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return {
+    color: darkMode ? props.iconColorDark : props.iconColor,
+  };
+});
 </script>
 
 <style lang="scss">
-@use "sass:color";
-
 #data {
   display: grid;
   place-items: center;
@@ -60,12 +74,11 @@ onMounted(() => {
   margin: 1.25rem 0;
   border-radius: 1.25rem;
   padding: 3.75rem;
-  color: var(--black);
+  color: black;
   text-align: center;
 
   @media (prefers-color-scheme: dark) {
-    color: var(--white);
-    background-color: color.scale(background, $lightness: -10%);
+    color: white;
   }
 
   h2 {

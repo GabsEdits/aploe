@@ -1,6 +1,6 @@
 <template>
-  <section id="features">
-    <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
+  <section id="features" :style="backgroundColor">
+    <span class="material-symbols-rounded icon" :style="iconColor">
       {{ icon }}
     </span>
     <h2>{{ translatable ? $t(title) : title }}</h2>
@@ -11,12 +11,30 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
   title: String,
   icon: String,
   background: String,
+  backgroundDark: String,
   iconColor: String,
+  iconColorDark: String,
   translatable: Boolean,
+});
+
+const backgroundColor = computed(() => {
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return {
+    backgroundColor: darkMode ? props.backgroundDark : props.background,
+  };
+});
+
+const iconColor = computed(() => {
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return {
+    color: darkMode ? props.iconColorDark : props.iconColor,
+  };
 });
 </script>
 
@@ -51,6 +69,10 @@ defineProps({
     border-radius: 10px;
     background-color: #c5dde86e;
     padding: 1.25rem;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #1a1a1a6e;
+    }
 
     p {
       margin-bottom: 0.625rem;

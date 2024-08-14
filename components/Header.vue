@@ -2,7 +2,11 @@
   <header :class="{ scrolled: isScrolled }">
     <h1>
       <a onclick="scrollToTop()" href="#top">
-        <img :src="logo" :alt="logoAlt" />
+        <picture>
+          <source media="(prefers-color-scheme: dark)" :srcset="logoDark" />
+          <source media="(prefers-color-scheme: light)" :srcset="logo" />
+          <img :alt="logoAlt" :src="logo" />
+        </picture>
       </a>
       <slot name="extraLogo"></slot>
     </h1>
@@ -84,6 +88,7 @@ onBeforeUnmount(() => {
 
 defineProps({
   logo: String,
+  logoDark: String,
   logoAlt: String,
   extraInfo: String,
   linkOne: String,
@@ -211,9 +216,9 @@ header {
           background-color: #c1c1c184;
           padding: 0.3125rem;
 
-          @media (prefers-color-scheme: dark) {
-            background-color: #ffffff2b;
-          }
+            @media (prefers-color-scheme: dark) {
+                background-color: #ffffff2b;
+            }
         }
       }
 
@@ -285,9 +290,20 @@ header {
     width: max-content;
     list-style: none;
 
+    @media (prefers-color-scheme: dark) {
+      background-color: #1d1d1ded;
+      backdrop-filter: blur(0.625rem);
+      -webkit-backdrop-filter: blur(0.625rem);
+      border: 0.0625rem solid #ffffff2b;
+    }
+
     .divider {
       margin: 0.25rem 20%;
       border-top: 0.0625rem solid #ccc;
+
+        @media (prefers-color-scheme: dark) {
+            border-top: 0.0625rem solid #ffffff2b;
+        }
     }
 
     a {
@@ -308,6 +324,10 @@ header {
       &:hover {
         background-color: #e0e0e0;
         padding: 0.625rem;
+
+        @media (prefers-color-scheme: dark) {
+          background-color: #333;
+        }
       }
     }
 
@@ -326,8 +346,16 @@ header {
   font-weight: 600;
   font-size: 1rem;
 
+    @media (prefers-color-scheme: dark) {
+        color: #dadada;
+    }
+
   a {
     color: #dadada !important;
+
+    @media (prefers-color-scheme: dark) {
+        color: #dadada !important;
+    }
   }
 
   @media screen and (min-width: 48rem) {

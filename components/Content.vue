@@ -1,6 +1,6 @@
 <template>
-  <section id="content-element" :style="'background-color:' + background">
-    <span class="material-symbols-rounded icon" :style="'color:' + iconColor">
+  <section id="content-element" :style="backgroundColor">
+    <span class="material-symbols-rounded icon" :style="iconColor">
       {{ icon }}
     </span>
     <h2>{{ translatable ? $t(title) : title }}</h2>
@@ -10,13 +10,31 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+import { computed } from "vue";
+
+const props = defineProps({
   title: String,
   description: String,
   icon: String,
   iconColor: String,
+  iconColorDark: String,
   background: String,
+  backgroundDark: String,
   translatable: Boolean,
+});
+
+const backgroundColor = computed(() => {
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return {
+    backgroundColor: darkMode ? props.backgroundDark : props.background,
+  };
+});
+
+const iconColor = computed(() => {
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return {
+    color: darkMode ? props.iconColorDark : props.iconColor,
+  };
 });
 </script>
 
