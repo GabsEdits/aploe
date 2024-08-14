@@ -117,8 +117,17 @@ header {
   height: 4.375rem;
   line-height: normal;
 
+  @media (prefers-color-scheme: dark) {
+    background-color: #1d1d1ded;
+    color: #fff;
+  }
+
   &.scrolled {
     border-bottom: 1.2px solid #e7e7e7;
+
+    @media (prefers-color-scheme: dark) {
+      border-bottom: 1.2px solid #ffffff2b;
+    }
   }
 
   @media (max-width: 47.9375rem) {
@@ -135,6 +144,14 @@ header {
   a {
     color: #555;
     cursor: pointer;
+
+    @media (prefers-color-scheme: dark) {
+      color: #C2C2C2;
+
+        &:hover {
+            color: #fff;
+        }
+    }
 
     &:hover {
       color: #333;
@@ -193,6 +210,10 @@ header {
           border-radius: 0.3125rem;
           background-color: #c1c1c184;
           padding: 0.3125rem;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: #ffffff2b;
+            }
         }
       }
 
@@ -272,9 +293,13 @@ header {
     a {
       display: block;
       padding: 0.625rem;
-      color: #a9a9a9;
+      color: #000;
       text-align: center;
       text-decoration: none;
+
+      @media (prefers-color-scheme: dark) {
+        color: #fff;
+      }
 
       &:last-child {
         margin-bottom: 0.25rem;

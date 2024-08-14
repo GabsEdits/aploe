@@ -116,7 +116,7 @@ Aplóe is still in heavy development, once it's mature enough, and gets a stable
 - [x] Create the basic components.
 - [x] Create the basic styles.
 - [x] Make translations optional.
-- [ ] Remove all junk styles and classes
+- [x] Remove all junk styles and classes
 - [ ] Support Dark Mode.
 - [ ] Create a template for the project.
 - [ ] Create configuration file for the project.

@@ -5,6 +5,11 @@ html {
 body {
   background-color: #ffffff;
   max-width: 100% !important;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #1d1d1d;
+    color: #ffffff !important;
+  }
 }
 
 main {
@@ -33,6 +38,10 @@ h2 {
   color: #1d1d1d;
   font-weight: 800;
   font-family: "InterDisplay";
+
+  @media (prefers-color-scheme: dark) {
+    color: #c2c2c2;
+  }
 }
 
 h1 {
@@ -58,6 +67,14 @@ a {
   font-weight: 500;
   font-size: 0.875rem;
   text-decoration: none;
+
+  @media (prefers-color-scheme: dark) {
+    color: #c2c2c2;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
 
   &:hover {
     color: #1d1d1d;

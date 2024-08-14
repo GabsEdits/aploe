@@ -12,66 +12,44 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 
-defineProps({
-  title: {
-    type: String,
-    default: "data.title",
-  },
-  description: {
-    type: String,
-    default: "data.desc",
-  },
-  api: {
-    type: String,
-    default: "https://api.example.com/data",
-  },
-  fallback: {
-    type: String,
-    default: "1000",
-  },
-  icon: {
-    type: String,
-    default: "car",
-  },
-  background: {
-    type: String,
-    default: "#fff",
-  },
-  iconColor: {
-    type: String,
-    default: "#000",
-  },
-  translatable: {
-    type: Boolean,
-    default: false,
-  },
-});
+const props = defineProps<{
+  title?: string;
+  description?: string;
+  api?: string;
+  fallback?: string;
+  icon?: string;
+  background?: string;
+  iconColor?: string;
+  translatable?: boolean;
+}>();
 
 const apiData = ref("");
 
-onMounted(() => {
-  fetchTruckData();
-});
-
-function fetchTruckData() {
-  fetch(api)
+function fetchData() {
+  fetch(props.api)
     .then((response) => response.json())
     .then((data) => {
       if (data && data.data) {
         apiData.value = data.data;
       } else {
-        apiData.value = fallback;
+        apiData.value = props.fallback;
       }
       console.log("data: " + apiData.value);
     })
     .catch((error) => {
-      console.error("Error fetching truck data:", error);
-      apiData.value = fallback;
+      console.error("Error fetching data:", error);
+      apiData.value = props.fallback;
     });
 }
+
+onMounted(() => {
+  fetchData();
+});
 </script>
 
 <style lang="scss">
+@use "sass:color";
+
 #data {
   display: grid;
   place-items: center;
@@ -84,6 +62,11 @@ function fetchTruckData() {
   padding: 3.75rem;
   color: var(--black);
   text-align: center;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--white);
+    background-color: color.scale(background, $lightness: -10%);
+  }
 
   h2 {
     font-size: 1.875rem;

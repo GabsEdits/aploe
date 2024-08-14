@@ -5,10 +5,6 @@
 </template>
 
 <style lang="scss">
-.quick-info {
-  margin-top: 20%;
-}
-
 .hide-on-mobile {
   @media (max-width: 48rem) {
     display: none;
