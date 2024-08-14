@@ -1,6 +1,6 @@
 {
   "name": "aploe",
-  "version": "0.10.0",
+  "version": "1.0.0-rc.0",
   "description": "Lightweight and minimalistic Vue.js components and styles for informational websites",
   "main": "index.ts",
   "repository": {
