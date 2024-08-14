@@ -146,11 +146,11 @@ header {
     cursor: pointer;
 
     @media (prefers-color-scheme: dark) {
-      color: #C2C2C2;
+      color: #c2c2c2;
 
-        &:hover {
-            color: #fff;
-        }
+      &:hover {
+        color: #fff;
+      }
     }
 
     &:hover {
@@ -211,9 +211,9 @@ header {
           background-color: #c1c1c184;
           padding: 0.3125rem;
 
-            @media (prefers-color-scheme: dark) {
-                background-color: #ffffff2b;
-            }
+          @media (prefers-color-scheme: dark) {
+            background-color: #ffffff2b;
+          }
         }
       }
 
