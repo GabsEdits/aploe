@@ -216,9 +216,9 @@ header {
           background-color: #c1c1c184;
           padding: 0.3125rem;
 
-            @media (prefers-color-scheme: dark) {
-                background-color: #ffffff2b;
-            }
+          @media (prefers-color-scheme: dark) {
+            background-color: #ffffff2b;
+          }
         }
       }
 
@@ -301,9 +301,9 @@ header {
       margin: 0.25rem 20%;
       border-top: 0.0625rem solid #ccc;
 
-        @media (prefers-color-scheme: dark) {
-            border-top: 0.0625rem solid #ffffff2b;
-        }
+      @media (prefers-color-scheme: dark) {
+        border-top: 0.0625rem solid #ffffff2b;
+      }
     }
 
     a {
@@ -346,15 +346,15 @@ header {
   font-weight: 600;
   font-size: 1rem;
 
-    @media (prefers-color-scheme: dark) {
-        color: #dadada;
-    }
+  @media (prefers-color-scheme: dark) {
+    color: #dadada;
+  }
 
   a {
     color: #dadada !important;
 
     @media (prefers-color-scheme: dark) {
-        color: #dadada !important;
+      color: #dadada !important;
     }
   }
 

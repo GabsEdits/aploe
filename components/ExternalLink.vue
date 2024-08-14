@@ -5,12 +5,9 @@
     </span>
     <h2>{{ translatable ? $t(title) : title }}</h2>
     <p v-if="description">{{ translatable ? $t(description) : description }}</p>
-    <router-link
-      v-if="isRouterLink"
-      :to="link"
-      :style="linkColor"
-      >{{ translatable ? $t(linkText) : linkText }}</router-link
-    >
+    <router-link v-if="isRouterLink" :to="link" :style="linkColor">{{
+      translatable ? $t(linkText) : linkText
+    }}</router-link>
     <a v-else :href="link" :style="linkColor">{{
       translatable ? $t(linkText) : linkText
     }}</a>
@@ -18,22 +15,22 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from "vue";
 
-const props = defineProps < {
-  title?: String,
-  description?: String,
-  icon?: String,
-  background?: String,
-  backgroundDark?: String,
-  iconColor?: String,
-  iconColorDark?: String,
-  link?: String,
-  linkText?: String,
-  linkColor?: String,
-  linkColorDark?: String,
-  isRouterLink?: Boolean,
-  translatable?: Boolean,
+const props = defineProps<{
+  title?: String;
+  description?: String;
+  icon?: String;
+  background?: String;
+  backgroundDark?: String;
+  iconColor?: String;
+  iconColorDark?: String;
+  link?: String;
+  linkText?: String;
+  linkColor?: String;
+  linkColorDark?: String;
+  isRouterLink?: Boolean;
+  translatable?: Boolean;
 }>();
 
 const backgroundColor = computed(() => {
@@ -94,7 +91,7 @@ const linkColor = computed(() => {
       color: white;
 
       &:hover {
-          filter: brightness(1.8);
+        filter: brightness(1.8);
       }
     }
   }
