@@ -62,7 +62,7 @@ const linkColor = computed(() => {
   gap: 0;
   border-radius: 1.25rem;
   padding: 3.75rem;
-  color: white;
+  color: black;
   text-align: center;
 
   @media (prefers-color-scheme: dark) {
