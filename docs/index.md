@@ -29,25 +29,11 @@ Aplóe is designed to be as easy to use as possible, with a simple configuration
 
 **It's currently not implemented, but it's planned for the future, as the project is still in development.**
 
-## Translations
+## Documentation
 
-Aplóe is designed to be easily translated into any language using Vue I18n. But, it's optional, by setting `translations` to `false` in the component, you can disable translations for that specific component. Here's an example:
+Aplóe is designed to be easy to use, with a simple and clean documentation that explains how to use the components and styles provided by the project. The documentation is available below.
 
-```vue
-<ExternalLink
-  title="External Link"
-  description="This is an external link"
-  link="https://example.org/"
-  icon="globe"
-  background="#c0e2de83"
-  iconColor="green"
-  translations="false"
-/>
-```
-
-In the future, there will be a setting to disable translations for the entire project.
-
-## Structure
+### Structure
 
 Aplóe offers a wide range of customizable components. With just a single element, you can easily customize these components to suit your needs. Here's an example:
 
@@ -81,6 +67,46 @@ The example above is a simple component that displays specific content from an A
 All elements are designed for easy translation, with the `title` and `description` being connected to the `vue-i18n` library.
 
 More complex components, such as the Header, Footer and other provide slots for more customization, but the basic structure is the same.
+
+### Translations
+
+Aplóe is designed to be easily translated into any language using Vue I18n. But, it's optional, by setting `translations` to `false` in the component, you can disable translations for that specific component. Here's an example:
+
+```vue
+<ExternalLink
+  title="External Link"
+  description="This is an external link"
+  link="https://example.org/"
+  icon="globe"
+  background="#c0e2de83"
+  iconColor="green"
+  translations="false"
+/>
+```
+
+The example above disables translations for the `ExternalLink` component. In the future, there will be a setting to disable translations for the entire project.
+
+### Component Glossary
+
+- **Data** - A component that displays specific content from an API. It's also enquipped with a title, description, icon, background and icon color. It also has a fallback value, in case the API is down.\*
+
+- **ExternalLink** - A component with a link to an page/website. It's also enquipped with a title, description, icon, background and icon color. The `link` is the URL to the page/website. It also supports Vue Router links, by using the `is-router-link` boolean.\*
+
+- **Header** - A component that displays the header of the page. It's also enquipped with a title, description, icon, background and icon color. It also has a slot for the navigation links, dropdowns and other elements.\*
+
+  - **ExtraInfo** - A component that displays extra information in the header. Just a slot.
+
+- **Faq** - A component that displays a list of frequently asked questions. It's also enquipped with a title, description, icon, background and icon color. It also has a slot for the questions and answers.\*
+
+  - **FaqItem** - A component that displays a single question and answer. It's also enquipped with a title and content.\*
+
+- **Features** - A component that displays a list of features. It's also enquipped with a title, description, icon, background and icon color. It also has a slot for the features.\*
+
+  - **Benefit** - A component that displays a single feature. It's also enquipped with a title and a slot for content.\*
+
+- **Content** - A component that displays any content. It's also enquipped with a title, description, icon, background and icon color. It also has a slot for the content.\*
+
+* - Has a boolean to enable/disable translations.
 
 ## Design
 
@@ -116,10 +142,15 @@ Aplóe is still in heavy development, once it's mature enough, and gets a stable
 - [x] Create the basic components.
 - [x] Create the basic styles.
 - [x] Make translations optional.
-- [x] Remove all junk styles and classes
+- [x] Remove all junk styles and classes.
 - [x] Support Dark Mode.
-- [ ] Create a template for the project.
-- [ ] Create configuration file for the project.
-- [ ] Create a documentation for the project.
+- [x] Create a documentation for the project.
 
-When all of the above tasks are completed, the project will get the release candidate status, and it will be ready for the first stable release.
+~~When all of the above tasks are completed, the project will get the release candidate status, and it will be ready for the first stable release.~~
+
+The project is now in the release candidate status, and it's preparing for the first stable release. The project is now in the `1.0.0-rc.1` version.
+
+### Future Plans
+
+- [ ] Create configuration file for the project. (It requires a lot of effort, so `2.0.0` is planned for this feature.)
+- [ ] Create a template for the project. (A template isn't necessary for how the project currently works, it's too simple, once a configuration file is added, a template will be needed.)
