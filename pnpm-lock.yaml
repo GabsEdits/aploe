@@ -22,7 +22,7 @@ importers:
         version: 3.3.3
       sass:
         specifier: ^1.77.8
-        version: 1.77.8
+        version: 1.78.0
       vue:
         specifier: ^3.4.31
         version: 3.4.38
@@ -1058,6 +1058,11 @@ packages:
 
   sass@1.77.8:
     resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+
+  sass@1.78.0:
+    resolution: {integrity: sha512-AaIqGSrjo5lA2Yg7RvFZrlXDBCp3nV4XP73GrLGvdRWWwk+8H3l0SDvq/5bA4eF+0RFPLuWUk3E+P1U/YqnpsQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2239,6 +2244,12 @@ snapshots:
       queue-microtask: 1.2.3
 
   sass@1.77.8:
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
+
+  sass@1.78.0:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.6
