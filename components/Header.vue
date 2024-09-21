@@ -194,19 +194,14 @@ header {
 
   ul {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
     margin: 0;
     padding: 0;
     list-style: none;
 
     li {
-      &:not(:first-child) {
-        margin-left: 1.25rem;
-      }
-
-      &:first-child {
-        margin-left: 0;
-      }
-
       a {
         transition: all 300ms;
         cursor: pointer;
