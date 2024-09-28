@@ -1,23 +1,36 @@
 <template>
   <footer class="bg-[#101010] text-white py-10">
-    <div class="flex flex-col gap-8 justify-center items-center px-4 sm:px-10 lg:px-20">
+    <div
+      class="flex flex-col gap-8 justify-center items-center px-4 sm:px-10 lg:px-20"
+    >
       <div
         class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center pb-10 sm:px-10 border-b border-[#333836]"
         v-if="badges"
       >
-        <img :src="badges" :alt="badgesAlt" class="mt-4 sm:mt-0 grayscale hover:grayscale-0 transition" />
+        <img
+          :src="badges"
+          :alt="badgesAlt"
+          class="mt-4 sm:mt-0 grayscale hover:grayscale-0 transition"
+        />
       </div>
 
       <div class="flex flex-col lg:flex-row gap-10 lg:gap-48">
-        <div v-for="(section, index) in links" :key="index" class="flex flex-col gap-2">
-          <h3 class="text-white text-opacity-70 text-base font-semibold">{{ translatable ? $t(section.sectionTitle) : section.sectionTitle }}</h3>
+        <div
+          v-for="(section, index) in links"
+          :key="index"
+          class="flex flex-col gap-2"
+        >
+          <h3 class="text-white text-opacity-70 text-base font-semibold">
+            {{ translatable ? $t(section.sectionTitle) : section.sectionTitle }}
+          </h3>
           <a
             v-for="(link, idx) in section.items"
             :key="idx"
             :href="link.href"
             class="text-white text-opacity-40"
           >
-            {{ translatable ? $t(link.text) : link.text }} <span v-if="link.info">{{ link.info }}</span>
+            {{ translatable ? $t(link.text) : link.text }}
+            <span v-if="link.info">{{ link.info }}</span>
           </a>
         </div>
       </div>
@@ -41,11 +54,15 @@
       <div class="flex flex-col gap-1 text-center sm:text-right">
         <p class="text-white text-opacity-40">
           Made with ❤️ by
-          <a class="text-[var(--boek-green-1)]" :href="authorLink">{{ author }}</a>
+          <a class="text-[var(--boek-green-1)]" :href="authorLink">{{
+            author
+          }}</a>
         </p>
         <p class="text-white text-opacity-40">
           Build with the foundation of
-          <a class="text-[var(--boek-green-1)]" href="https://aploe.gxbs.dev">Aplóe</a>
+          <a class="text-[var(--boek-green-1)]" href="https://aploe.gxbs.dev"
+            >Aplóe</a
+          >
         </p>
       </div>
     </div>
@@ -62,6 +79,6 @@ defineProps({
   links: Array,
   copyright: String,
   author: String,
-  authorLink: String
+  authorLink: String,
 });
 </script>
