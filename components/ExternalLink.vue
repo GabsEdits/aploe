@@ -75,7 +75,12 @@ const linkColor = computed(() => {
 
   p {
     margin-bottom: 2.5rem;
+    color: black;
     font-size: 1rem;
+
+    @media (prefers-color-scheme: dark) {
+      color: white;
+    }
   }
 
   a {
