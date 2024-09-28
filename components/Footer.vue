@@ -1,188 +1,67 @@
 <template>
-  <footer id="footer">
-    <img v-if="badges" :src="badges" class="badges" :alt="badgesAlt" />
-    <h2 class="title">{{ $t(title) }}</h2>
-    <a v-if="specialLink" :href="specialLink" id="footer-special-link">
-      <slot name="special"></slot>
-    </a>
-    <nav>
-      <template v-for="item in footerLinks">
-        <a :href="item.href">
-          <slot :name="item.slotName"></slot>
-        </a>
-      </template>
-    </nav>
-    <div class="footer-additional">
-      <a
-        :href="facebook"
-        v-if="facebook"
-        aria-label="Check out the Facebook Page"
-        ><i class="fab fa-facebook"></i
-      ></a>
-      <a
-        :href="linkedin"
-        v-if="linkedin"
-        aria-label="Check out our LinkedIn Page"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-      <a :href="github" v-if="github" aria-label="Check out the source code"
-        ><i class="fab fa-github"></i
-      ></a>
-      <a
-        :href="instagram"
-        v-if="instagram"
-        aria-label="Check out our Instagram Page"
-        ><i class="fab fa-instagram"></i
-      ></a>
-      <router-link to="/privacy">Privacy Policy</router-link>
-      <p class="made-by">
-        Made with ❤️ by
-        <a :href="authorLink" class="author">{{ author }}</a>
-      </p>
-      <p class="footer-copyright">
-        <router-link to="/developer"> &copy; {{ copyright }} </router-link>
-      </p>
+  <footer class="bg-[#101010] text-white py-10">
+    <div class="flex flex-col gap-8 justify-center items-center px-4 sm:px-10 lg:px-20">
+      <div
+        class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center pb-10 sm:px-10 border-b border-[#333836]"
+        v-if="badges"
+      >
+        <img :src="badges" :alt="badgesAlt" class="mt-4 sm:mt-0 grayscale hover:grayscale-0 transition" />
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-48">
+        <div v-for="(section, index) in links" :key="index" class="flex flex-col gap-2">
+          <h3 class="text-white text-opacity-70 text-base font-semibold">{{ translatable ? $t(section.sectionTitle) : section.sectionTitle }}</h3>
+          <a
+            v-for="(link, idx) in section.items"
+            :key="idx"
+            :href="link.href"
+            class="text-white text-opacity-40"
+          >
+            {{ translatable ? $t(link.text) : link.text }} <span v-if="link.info">{{ link.info }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col sm:flex-row flex-wrap justify-between items-center pt-10 px-4 sm:px-10 lg:px-20 gap-6 sm:gap-0"
+    >
+      <div class="flex flex-col sm:flex-row flex-wrap gap-5 items-center">
+        <img :src="icon" alt="Logo" class="w-10 hover:animate-spin delay-100" />
+        <div class="flex flex-col gap-2 text-center sm:text-left text-sm">
+          <p class="text-white text-opacity-40">
+            All trademarks and logos are the property of their respective
+            owners.
+          </p>
+          <router-link class="text-white text-opacity-40" to="/developer">
+            © {{ copyright }}
+          </router-link>
+        </div>
+      </div>
+      <div class="flex flex-col gap-1 text-center sm:text-right">
+        <p class="text-white text-opacity-40">
+          Made with ❤️ by
+          <a class="text-[var(--boek-green-1)]" :href="authorLink">{{ author }}</a>
+        </p>
+        <p class="text-white text-opacity-40">
+          Build with the foundation of
+          <a class="text-[var(--boek-green-1)]" href="https://aploe.gxbs.dev">Aplóe</a>
+        </p>
+      </div>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
 defineProps({
-  title: String,
   badges: String,
+  translatable: Boolean,
   badgesAlt: String,
+  icon: String,
   specialLink: String,
-  firstLink: String,
-  secondLink: String,
-  thirdLink: String,
-  facebook: String,
-  linkedin: String,
-  github: String,
-  instagram: String,
+  links: Array,
   copyright: String,
   author: String,
-  authorLink: String,
-  footerLinks: Array,
+  authorLink: String
 });
 </script>
-
-<style lang="scss">
-footer {
-  border-radius: 1.875rem 1.875rem 0 0;
-  background-color: var(--footer-back);
-  padding: 1rem;
-  text-align: center;
-
-  .footer-links,
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.625rem;
-    margin-bottom: 1rem;
-
-    a {
-      margin: 0.5rem;
-      padding: 0.5rem;
-      color: #333;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .footer-additional {
-    margin-top: 1rem;
-
-    a {
-      transition: color 0.3s;
-      margin: 0.5rem;
-      font-size: 1.5rem;
-      color: #333;
-      text-decoration: none;
-
-      &:hover {
-        color: #007bff;
-      }
-    }
-  }
-
-  .footer-copyright {
-    margin-top: 1rem;
-    font-size: medium;
-
-    a {
-      color: #666;
-    }
-  }
-
-  .made-by {
-    margin-top: 1.25rem;
-    color: #000;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .title {
-    margin-top: 0.5%;
-    font-weight: 600;
-    font-size: 120%;
-    text-align: center;
-  }
-
-  #footer-special-link {
-    margin-top: 1.5625rem;
-    margin-bottom: 0;
-    padding: 0.875rem;
-    color: #333;
-    font-size: 1.0625rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .author {
-    transition: 0.5s;
-    margin-left: 0;
-    color: #000;
-    font-weight: 800;
-    text-decoration: underline 0.0938rem;
-
-    &:hover {
-      color: #000;
-      text-decoration: underline green 0.0938rem;
-    }
-  }
-
-  .badges {
-    position: absolute;
-    right: 0.625rem;
-    margin-top: 1.875rem;
-    margin-top: 1.875rem;
-    width: 31.25rem;
-    height: 3.5156rem;
-
-    @media (max-width: 47.9375rem) {
-      position: relative;
-      right: 0;
-      left: 0;
-      margin: 0 auto;
-      margin-bottom: 1.25rem;
-      aspect-ratio: 16/9;
-      max-width: 80%;
-      object-fit: contain;
-    }
-
-    @media screen and (min-width: 48.4375rem) and (max-width: 65.9375rem) {
-      right: 0;
-    }
-
-    @media screen and (min-width: 48rem) and (max-width: 72.125rem) {
-      display: none;
-    }
-  }
-}
-</style>
