@@ -1,68 +1,61 @@
 <template>
-  <footer class="bg-[#101010] text-white py-10">
-    <div
-      class="flex flex-col gap-8 justify-center items-center px-4 sm:px-10 lg:px-20"
-    >
-      <div
-        class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center pb-10 sm:px-10 border-b border-[#333836]"
-        v-if="badges"
-      >
-        <img
-          :src="badges"
-          :alt="badgesAlt"
-          class="mt-4 sm:mt-0 grayscale hover:grayscale-0 transition"
-        />
+  <footer>
+    <div class="main-content">
+      <div class="badges-section" v-if="badges">
+        <img :src="badges" :alt="badgesAlt" />
       </div>
 
-      <div class="flex flex-col lg:flex-row gap-10 lg:gap-48">
+      <div class="footer-links">
         <div
           v-for="(section, index) in links"
           :key="index"
-          class="flex flex-col gap-2"
+          class="link-section"
         >
-          <h3 class="text-white text-opacity-70 text-base font-semibold">
+          <h3>
             {{ translatable ? $t(section.sectionTitle) : section.sectionTitle }}
           </h3>
-          <a
+          <component
             v-for="(link, idx) in section.items"
             :key="idx"
-            :href="link.href"
-            class="text-white text-opacity-40"
+            :is="link.isRouterLink ? 'router-link' : 'a'"
+            :to="link.isRouterLink ? link.href : null"
+            :href="!link.isRouterLink ? link.href : null"
+            class="link"
           >
             {{ translatable ? $t(link.text) : link.text }}
             <span v-if="link.info">{{ link.info }}</span>
-          </a>
+          </component>
         </div>
       </div>
     </div>
 
-    <div
-      class="flex flex-col sm:flex-row flex-wrap justify-between items-center pt-10 px-4 sm:px-10 lg:px-20 gap-6 sm:gap-0"
-    >
-      <div class="flex flex-col sm:flex-row flex-wrap gap-5 items-center">
-        <img :src="icon" alt="Logo" class="w-10 hover:animate-spin delay-100" />
-        <div class="flex flex-col gap-2 text-center sm:text-left text-sm">
-          <p class="text-white text-opacity-40">
+    <div class="footer-bottom">
+      <div class="bottom-left">
+        <img :src="icon" alt="Logo" class="logo" />
+        <div class="trademark-info">
+          <p>
             All trademarks and logos are the property of their respective
             owners.
           </p>
-          <router-link class="text-white text-opacity-40" to="/developer">
-            © {{ copyright }}
-          </router-link>
+          <component
+            :is="copyright.isRouter ? 'router-link' : 'a'"
+            :to="copyright.isRouter ? copyright.href : null"
+            :href="!copyright.isRouter ? copyright.href : null"
+            class="copyright-link"
+          >
+            © {{ copyright.text }}
+          </component>
         </div>
       </div>
-      <div class="flex flex-col gap-1 text-center sm:text-right">
-        <p class="text-white text-opacity-40">
+
+      <div class="bottom-right">
+        <p class="text-muted">
           Made with ❤️ by
-          <a class="text-[var(--boek-green-1)]" :href="authorLink">{{
-            author
-          }}</a>
+          <a class="author-link" :href="authorLink">{{ author }}</a>
         </p>
-        <p class="text-white text-opacity-40">
-          Build with the foundation of
-          <a class="text-[var(--boek-green-1)]" href="https://aploe.gxbs.dev"
-            >Aplóe</a
-          >
+        <p class="text-muted">
+          Built with the foundation of
+          <a class="aploe-link" href="https://aploe.gxbs.dev">Aplóe</a>
         </p>
       </div>
     </div>
@@ -76,9 +69,182 @@ defineProps({
   badgesAlt: String,
   icon: String,
   specialLink: String,
-  links: Array,
-  copyright: String,
+  links: Array as PropType<Array<{ sectionTitle: string; items: Array<{ isRouterLink: boolean; href: string; text: string; info?: string }> }>>,
+  copyright: {
+    type: Object as PropType<{ text: string; href: string; isRouter: boolean }>,
+    required: true,
+  },
   author: String,
   authorLink: String,
 });
 </script>
+
+<style lang="scss">
+footer {
+  background-color: #101010;
+  color: white;
+  padding: 2.5rem 0;
+
+  a:hover {
+    color: #f1f1f1;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+
+    @media (min-width: 640px) {
+      padding: 0 2.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 0 5rem;
+    }
+  }
+
+  .badges-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-bottom: 1px solid #333836;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+    }
+
+    img {
+      margin-top: 1rem;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+
+      @media (min-width: 640px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: 12rem;
+    }
+
+    .link-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      h3 {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .link {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.5rem;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      gap: 0;
+    }
+
+    @media (min-width: 1024px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    .bottom-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: center;
+
+      @media (min-width: 640px) {
+        flex-direction: row;
+      }
+
+      .logo {
+        width: 2.5rem;
+        transition: transform 0.3s;
+
+        &:hover {
+          animation: spin 1s infinite linear;
+        }
+      }
+
+      .trademark-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.4);
+
+        @media (min-width: 640px) {
+          text-align: left;
+        }
+      }
+    }
+
+    .bottom-right {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      text-align: center;
+
+      @media (min-width: 640px) {
+        text-align: right;
+      }
+
+      .text-muted {
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .author-link,
+      .aploe-link {
+        color: var(--boek-green-1);
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
