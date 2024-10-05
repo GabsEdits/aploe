@@ -69,7 +69,17 @@ defineProps({
   badgesAlt: String,
   icon: String,
   specialLink: String,
-  links: Array as PropType<Array<{ sectionTitle: string; items: Array<{ isRouterLink: boolean; href: string; text: string; info?: string }> }>>,
+  links: Array as PropType<
+    Array<{
+      sectionTitle: string;
+      items: Array<{
+        isRouterLink: boolean;
+        href: string;
+        text: string;
+        info?: string;
+      }>;
+    }>
+  >,
   copyright: {
     type: Object as PropType<{ text: string; href: string; isRouter: boolean }>,
     required: true,
