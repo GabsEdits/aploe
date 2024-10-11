@@ -16,7 +16,7 @@ importers:
         version: 4.0.2
       non.geist:
         specifier: ^1.0.3
-        version: 1.0.3
+        version: 1.0.4
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -960,6 +960,9 @@ packages:
 
   non.geist@1.0.3:
     resolution: {integrity: sha512-KTT38rJKUTijUZtwqZR38OJeHDupfTkl1JoVNVVoQ0vV41Zjax/BMULWFyXtsK5YCd1SU2ofFSJooD8nWClXcA==}
+
+  non.geist@1.0.4:
+    resolution: {integrity: sha512-2spmLTgz5ipZrFGLiI1YkiHb8Yit0yFySPvWzal3wCwCFilMFQQ/Jwwz4lcEatwIKUpOeMYwyFwP8MJ8EVKqGA==}
 
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
@@ -2141,6 +2144,8 @@ snapshots:
   natural-compare@1.4.0: {}
 
   non.geist@1.0.3: {}
+
+  non.geist@1.0.4: {}
 
   normalize-path@3.0.0: {}
 
