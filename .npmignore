@@ -4,3 +4,5 @@
 .prettierignore
 .prettierrc
 docs
+mod.ts
+jsr.json
