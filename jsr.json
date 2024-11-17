@@ -1,7 +1,7 @@
 {
   "name": "@gabs/aploe",
   "version": "1.0.0-rc.6",
-  "exports": "./mod.ts",
+  "exports": "./index.ts",
   "exclude": [
     ".github",
     "node_modules",
