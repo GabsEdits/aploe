@@ -5,7 +5,7 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "aplos": "^2.4.0"
+    "aplos": "^2.5.0"
   },
   "devDependencies": {
     "@mdit/plugin-tasklist": "^0.13.0",
