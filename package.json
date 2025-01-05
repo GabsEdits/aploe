@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/GabsEdits/aploe/issues"
   },
-  "homepage": "https://aploe.gxbs.me",
+  "homepage": "https://aploe.gxbs.dev",
   "dependencies": {
     "dotenv": "^16.4.5",
     "inter-ui": "^4.0.2",
