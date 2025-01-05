@@ -125,7 +125,7 @@ Aplóe is still in heavy development, once it's mature enough, and gets a stable
 <section class="usedby">
 
 - [![Boekestijn](https://soferii.md/images/boekestijn-transport.svg#no-border#static)](https://boekestijn.md)
-- [Gabs](https://gxbs.me/) { #myself }
+- [Gabs](https://gxbs.dev/) { #myself }
 
 </section>
 
