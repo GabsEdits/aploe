@@ -38,8 +38,8 @@ importers:
         version: 2.4.0
     devDependencies:
       '@mdit/plugin-tasklist':
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.16.0
+        version: 0.16.0
       sass:
         specifier: ^1.84.0
         version: 1.84.0
@@ -350,8 +350,8 @@ packages:
       markdown-it:
         optional: true
 
-  '@mdit/plugin-tasklist@0.13.0':
-    resolution: {integrity: sha512-7UXDIbgPiKrEyrXuRWqSX/UisCM8C7fvoj9c0021L1Mf2vcOf5lsG7evOwucTha0s8gVx1JfbCXanNELZnpsdQ==}
+  '@mdit/plugin-tasklist@0.16.0':
+    resolution: {integrity: sha512-pxVxartDd8LYxhdYxyrh4c7JEAq+4cEMLI1HNCHTMK9cfO+SoVd/YpibfrDUg+LHvffc8Pf2Yc8pWXNoW34B1g==}
     engines: {node: '>= 18'}
     peerDependencies:
       markdown-it: ^14.1.0
@@ -1581,7 +1581,7 @@ snapshots:
     dependencies:
       '@types/markdown-it': 14.1.2
 
-  '@mdit/plugin-tasklist@0.13.0':
+  '@mdit/plugin-tasklist@0.16.0':
     dependencies:
       '@types/markdown-it': 14.1.2
 
