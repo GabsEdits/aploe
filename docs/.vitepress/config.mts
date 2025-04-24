@@ -27,7 +27,7 @@ export default defineConfig({
       madeby: {
         show: true,
         name: "Gabs",
-        link: "https://www.gxbs.me/",
+        link: "https://gxbs.dev",
       },
 
       sourcecode: {
