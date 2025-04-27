@@ -65,7 +65,7 @@ export default defineConfig({
           "Lightweight and Minimalistic Vue.js Components and Styles for Informational Websites", // Change this to your description
       },
     ],
-    ["meta", { name: "twitter:url", content: "https://aploe.gxbs.me" }], // Change this to your domain
+    ["meta", { name: "twitter:url", content: "https://aploe.gxbs.dev" }], // Change this to your domain
   ],
   sitemap: {
     // Change this to your domain
