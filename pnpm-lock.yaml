@@ -10,10 +10,10 @@ importers:
     dependencies:
       dotenv:
         specifier: ^16.4.5
-        version: 16.5.0
+        version: 16.4.5
       inter-ui:
         specifier: ^4.0.2
-        version: 4.0.2
+        version: 4.1.0
       non.geist:
         specifier: ^1.0.3
         version: 1.0.4
@@ -811,8 +811,8 @@ packages:
     engines: {node: '>=0.10'}
     hasBin: true
 
-  dotenv@16.5.0:
-    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
+  dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
     engines: {node: '>=12'}
 
   entities@4.5.0:
@@ -959,8 +959,8 @@ packages:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
     engines: {node: '>=0.8.19'}
 
-  inter-ui@4.0.2:
-    resolution: {integrity: sha512-YmfzwEtzuVzEenQwSB/tmmqi/A0a2GnFk4mG4ZFULXiO5DNk0fJWiO3o9i1sdVKuMVGx9iiNQnCq8ghWZJVVHw==}
+  inter-ui@4.1.0:
+    resolution: {integrity: sha512-lUJ5YLtpj7jWsrhTbN5w32MLOqISGFGOTMRNn+IGhLrbt67z5yvmBRoqpLCWLVlJ+l7kqnH6su4meEqvLMfAAA==}
     engines: {node: '>=16.0.0'}
 
   is-extglob@2.1.1:
@@ -1976,7 +1976,7 @@ snapshots:
       eslint: 9.7.0
       eslint-plugin-vue: 9.27.0(eslint@9.7.0)
       globals: 15.8.0
-      inter-ui: 4.0.2
+      inter-ui: 4.1.0
       non.geist: 1.0.4
     transitivePeerDependencies:
       - markdown-it
@@ -2042,7 +2042,7 @@ snapshots:
   detect-libc@1.0.3:
     optional: true
 
-  dotenv@16.5.0: {}
+  dotenv@16.4.5: {}
 
   entities@4.5.0: {}
 
@@ -2232,7 +2232,7 @@ snapshots:
 
   imurmurhash@0.1.4: {}
 
-  inter-ui@4.0.2: {}
+  inter-ui@4.1.0: {}
 
   is-extglob@2.1.1: {}
 
