@@ -1,6 +1,7 @@
 <div align="center">
   <h1>Aplóe</h1>
   <p>Lightweight and Minimalistic Vue.js Components and Styles for Informational Websites</p>
+  <a href="https://gxbs.dev/server"><img src="https://gxbs.dev/server-badge.svg" alt="Server Badge"></a>
 </div>
 
 - Purposefully designed lightweight and minimalistic design language.
