@@ -8,7 +8,7 @@
     "aplos": "^2.5.0"
   },
   "devDependencies": {
-    "@mdit/plugin-tasklist": "^0.16.0",
+    "@mdit/plugin-tasklist": "^0.20.0",
     "sass": "^1.86.3",
     "vitepress": "^1.3.1"
   }
