@@ -38,8 +38,8 @@ importers:
         version: 2.5.0
     devDependencies:
       '@mdit/plugin-tasklist':
-        specifier: ^0.16.0
-        version: 0.16.0
+        specifier: ^0.21.0
+        version: 0.21.0
       sass:
         specifier: ^1.89.1
         version: 1.89.1
@@ -363,8 +363,8 @@ packages:
       markdown-it:
         optional: true
 
-  '@mdit/plugin-tasklist@0.16.0':
-    resolution: {integrity: sha512-pxVxartDd8LYxhdYxyrh4c7JEAq+4cEMLI1HNCHTMK9cfO+SoVd/YpibfrDUg+LHvffc8Pf2Yc8pWXNoW34B1g==}
+  '@mdit/plugin-tasklist@0.21.0':
+    resolution: {integrity: sha512-Odl/7HTCmp6o3pjoeHt1GCVX0cKlPm6foMVpxY1zSBFMgMJfEU4KSzR2gqqqDDFyguvspexfWB8KMsTIDTlxmQ==}
     engines: {node: '>= 18'}
     peerDependencies:
       markdown-it: ^14.1.0
@@ -1214,6 +1214,11 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
+  sass@1.89.1:
+    resolution: {integrity: sha512-eMLLkl+qz7tx/0cJ9wI+w09GQ2zodTkcE/aVfywwdlRcI3EO19xGnbmJwg/JMIm+5MxVJ6outddLZ4Von4E++Q==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+
   search-insights@2.14.0:
     resolution: {integrity: sha512-OLN6MsPMCghDOqlCtsIsYgtsC0pnwVTyT9Mu6A3ewOj1DxvzZF6COrn2g86E/c05xbktB0XN04m/t1Z+n+fTGw==}
 
@@ -1659,7 +1664,7 @@ snapshots:
     dependencies:
       '@types/markdown-it': 14.1.2
 
-  '@mdit/plugin-tasklist@0.16.0':
+  '@mdit/plugin-tasklist@0.21.0':
     dependencies:
       '@types/markdown-it': 14.1.2
 
@@ -2521,6 +2526,14 @@ snapshots:
   run-parallel@1.2.0:
     dependencies:
       queue-microtask: 1.2.3
+
+  sass@1.89.1:
+    dependencies:
+      chokidar: 4.0.3
+      immutable: 5.1.2
+      source-map-js: 1.2.1
+    optionalDependencies:
+      '@parcel/watcher': 2.5.1
 
   sass@1.89.1:
     dependencies:
