@@ -10,7 +10,7 @@ importers:
     dependencies:
       dotenv:
         specifier: ^16.4.5
-        version: 16.4.5
+        version: 16.6.0
       inter-ui:
         specifier: ^4.0.2
         version: 4.1.0
@@ -897,8 +897,8 @@ packages:
     engines: {node: '>=0.10'}
     hasBin: true
 
-  dotenv@16.4.5:
-    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+  dotenv@16.6.0:
+    resolution: {integrity: sha512-Omf1L8paOy2VJhILjyhrhqwLIdstqm1BvcDPKg4NGAlkwEu9ODyrFbvk8UymUOMCT+HXo31jg1lArIrVAAhuGA==}
     engines: {node: '>=12'}
 
   entities@4.5.0:
@@ -2200,7 +2200,7 @@ snapshots:
   detect-libc@1.0.3:
     optional: true
 
-  dotenv@16.4.5: {}
+  dotenv@16.6.0: {}
 
   entities@4.5.0: {}
 
