@@ -21,7 +21,7 @@
   },
   "homepage": "https://aploe.gxbs.dev",
   "dependencies": {
-    "dotenv": "^16.4.5",
+    "dotenv": "^17.0.1",
     "inter-ui": "^4.0.2",
     "non.geist": "^1.0.3",
     "prettier": "^3.3.3",
@@ -29,7 +29,7 @@
     "vue": "^3.4.31"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0"
+    "@types/node": "^24.0.8"
   },
   "scripts": {
     "docs:dev": "pnpm --filter=./docs run dev",

@@ -93,15 +93,12 @@ The example above disables translations for the `ExternalLink` component. In the
 - **ExternalLink** - A component with a link to an page/website. It's also enquipped with a title, description, icon, background and icon color. The `link` is the URL to the page/website. It also supports Vue Router links, by using the `is-router-link` boolean.\*
 
 - **Header** - A component that displays the header of the page. It's also enquipped with a title, description, icon, background and icon color. It also has a slot for the navigation links, dropdowns and other elements.\*
-
   - **ExtraInfo** - A component that displays extra information in the header. Just a slot.
 
 - **Faq** - A component that displays a list of frequently asked questions. It's also enquipped with a title, description, icon, background and icon color. It also has a slot for the questions and answers.\*
-
   - **FaqItem** - A component that displays a single question and answer. It's also enquipped with a title and content.\*
 
 - **Features** - A component that displays a list of features. It's also enquipped with a title, description, icon, background and icon color. It also has a slot for the features.\*
-
   - **Benefit** - A component that displays a single feature. It's also enquipped with a title and a slot for content.\*
 
 - **Content** - A component that displays any content. It's also enquipped with a title, description, icon, background and icon color. It also has a slot for the content.\*
