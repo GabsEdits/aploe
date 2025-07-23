@@ -13,7 +13,7 @@ importers:
         version: 17.0.1
       inter-ui:
         specifier: ^4.0.2
-        version: 4.1.0
+        version: 4.1.1
       non.geist:
         specifier: ^1.0.3
         version: 1.0.4
@@ -779,10 +779,6 @@ packages:
   character-entities-legacy@3.0.0:
     resolution: {integrity: sha512-RpPp0asT/6ufRm//AJVwpViZbGM/MkjQFxJccQRHmISF/22NBtsHqAWmL+/pmkPWoIUJdWyeVleTl1wydHATVQ==}
 
-  chokidar@4.0.1:
-    resolution: {integrity: sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA==}
-    engines: {node: '>= 14.16.0'}
-
   chokidar@4.0.3:
     resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
     engines: {node: '>= 14.16.0'}
@@ -1002,6 +998,10 @@ packages:
 
   inter-ui@4.1.0:
     resolution: {integrity: sha512-lUJ5YLtpj7jWsrhTbN5w32MLOqISGFGOTMRNn+IGhLrbt67z5yvmBRoqpLCWLVlJ+l7kqnH6su4meEqvLMfAAA==}
+    engines: {node: '>=16.0.0'}
+
+  inter-ui@4.1.1:
+    resolution: {integrity: sha512-451h0J29HyOmA+JXgSi/6M12tL7ZCZ8arYKZUXiOXTJpJbAKqJvFh3k5SiV3x7tKe0C0KyrKUUiQIvvZ2PQDcA==}
     engines: {node: '>=16.0.0'}
 
   is-extglob@2.1.1:
@@ -2054,10 +2054,6 @@ snapshots:
 
   character-entities-legacy@3.0.0: {}
 
-  chokidar@4.0.1:
-    dependencies:
-      readdirp: 4.0.2
-
   chokidar@4.0.3:
     dependencies:
       readdirp: 4.1.2
@@ -2314,6 +2310,8 @@ snapshots:
   imurmurhash@0.1.4: {}
 
   inter-ui@4.1.0: {}
+
+  inter-ui@4.1.1: {}
 
   is-extglob@2.1.1: {}
 
